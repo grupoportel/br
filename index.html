@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRUPO PORTEL - Médicos de Negócios</title>
+    <!-- Tailwind CSS CDN para estilização rápida e responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Classes personalizadas para animações e cores */
+        .cta-button {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #08f7ff;
+            margin-top: 8px;
+            border-radius: 9999px;
+        }
+
+        .card-icon {
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 50;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar Fixa -->
+    <header class="sticky top-0 bg-gray-200 shadow-sm z-40">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="text-2xl font-bold text-cyan-400 tracking-wide transform hover:scale-105 transition duration-300">GRUPO PORTEL</a>
+
+            <!-- Menu de Navegação (Escondido em mobile, visível em md+) -->
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#home" class="text-gray-600 hover:text-cyan-400 transition duration-300">Início</a>
+                <a href="#about" class="text-gray-600 hover:text-cyan-400 transition duration-300">Sobre</a>
+                <a href="#services" class="text-gray-600 hover:text-cyan-400 transition duration-300">Serviços</a>
+                <a href="#method" class="text-gray-600 hover:text-cyan-400 transition duration-300">Método</a>
+                <a href="#cases" class="text-gray-600 hover:text-cyan-400 transition duration-300">Casos</a>
+                <a href="#contact" class="text-gray-600 hover:text-cyan-400 transition duration-300">Contato</a>
+            </div>
+
+            <!-- Botão de Agendamento (visível em todas as telas) -->
+            <a href="#contact" class="hidden md:inline-block px-5 py-2 text-white bg-cyan-400 rounded-lg shadow-md hover:bg-green-500 transition duration-300 cta-button">
+                Agende um Diagnóstico
+            </a>
+
+            <!-- Botão do menu mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-gray-900 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <a href="#home" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Início</a>
+            <a href="#about" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Sobre</a>
+            <a href="#services" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Serviços</a>
+            <a href="#method" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Método</a>
+            <a href="#cases" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Casos</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Contato</a>
+            <a href="#contact" class="block px-4 py-2 text-white bg-blue-600 rounded-lg mx-4 mt-2 text-center hover:bg-blue-700">Agende um Diagnóstico</a>
+        </div>
+    </header>
+
+    <!-- Seção Principal (Home) -->
+    <main>
+        <section id="home" class="relative py-20 md:py-32 bg-gray-100">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+                <!-- Conteúdo de texto -->
+                <div class="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                        O diagnóstico preciso para a <span class="text-cyan-400">saúde do seu negócio</span>.
+                    </h1>
+                    <p class="mt-6 text-lg md:text-xl text-gray-600 max-w-xl">
+                        Mais que consultores, somos médicos de negócios. Identificamos as causas dos seus desafios e prescrevemos o tratamento ideal para o crescimento e a organização da sua empresa.
+                    </p>
+                    <a href="#contact" class="mt-8 inline-block px-8 py-3 bg-cyan-400 text-white font-semibold rounded-lg shadow-lg hover:bg-green-500 transition duration-300 cta-button">
+                        Agende seu Diagnóstico Gratuito
+                    </a>
+                </div>
+                <!-- Imagem Ilustrativa (Placeholder) -->
+                <div class="md:w-1/2 flex justify-center md:justify-end">
+                    <img src="imagens/medico.png" alt="Ilustração do Grupo Portel ajudando empresas" class="rounded-x1 shadow-lg transform rotate-3 hover:rotate-0 transition duration-500 max-w-1xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="about" class="py-16 md:py-24 bg-gray-200">
+            <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center">
+                <!-- Imagem Profissional (Placeholder) -->
+                <div class="md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
+                    <img src="imagens/logo.png" alt="Foto profissional da equipe Grupo Portel" class="rounded-xl shadow-lg transform -rotate-3 hover:rotate-0 transition duration-500">
+                </div>
+                <!-- Conteúdo de texto -->
+                <div class="md:w-1/2 md:pl-16 text-center md:text-left">
+                    <h2 class="section-title text-3xl font-bold text-gray-900 mb-4">Quem Somos</h2>
+                    <p class="text-gray-600 mb-6">
+                        Somos o Grupo Portel, uma equipe apaixonada por transformar negócios. Nossa missão é atuar como um parceiro estratégico, usando uma metodologia rigorosa e uma abordagem empática para desvendar o potencial oculto de cada empresa. Acreditamos que a saúde de um negócio se baseia em uma estrutura sólida, processos otimizados e uma visão clara de futuro.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Nosso diferencial é o foco no **diagnóstico preciso**, identificando as verdadeiras causas das dificuldades, e não apenas os sintomas. Com base nisso, prescrevemos um **plano de tratamento** personalizado e acompanhamos a sua **recuperação e crescimento**, garantindo resultados duradouros e uma empresa mais forte e resiliente.
+                    </p>
+                    <!-- (concertar)href="#contact" class="inline-block px-6 py-2 bg-cyan-400 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300 cta-button">
+                        Converse Conosco -->
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Serviços -->
+        <section id="services" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="section-title mx-auto text-3xl font-bold text-gray-900 mb-4">Nossos Serviços</h2>
+                <p class="text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Nossa atuação é baseada em três pilares essenciais para a saúde e o crescimento de qualquer negócio. Oferecemos uma abordagem completa, do diagnóstico à implementação.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Serviço 1: Diagnóstico Empresarial -->
+                    <div class="bg-white p-8 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                        <div class="bg-blue-100 p-4 rounded-full inline-block mb-4 card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Diagnóstico Empresarial</h3>
+                        <p class="text-gray-600">
+                            Análise profunda da saúde financeira, operacional e de mercado da sua empresa para identificar pontos de dor e oportunidades não exploradas.
+                        </p>
+                    </div>
+                    <!-- Serviço 2: Planejamento Estratégico -->
+                    <div class="bg-white p-8 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                        <div class="bg-blue-100 p-4 rounded-full inline-block mb-4 card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Planejamento Estratégico</h3>
+                        <p class="text-gray-600">
+                            Construímos um roteiro detalhado e personalizado, definindo metas claras e as ações necessárias para alcançar o crescimento e a organização desejados.
+                        </p>
+                    </div>
+                    <!-- Serviço 3: Implementação e Acompanhamento -->
+                    <div class="bg-white p-8 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                    <div class="bg-blue-100 p-4 rounded-full inline-block mb-4 card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H1m1 0a2 2 0 01-2-2V5a2 2 0 012-2h18a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h18"/>
+                        </svg>
+                    </div>
+                       <h3 class="text-xl font-semibold mb-2">Implementação e Acompanhamento</h3>
+                       <p class="text-gray-600">
+                            Acompanhamos a execução das estratégias de perto, garantindo que cada passo seja dado com precisão e que os resultados sejam monitorados continuamente.
+                       </p>
+                    
+                </div>
+                <div class="mt-12 text-center">
+                    <!-- consertar <a href="#contact" class="inline-block px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 cta-button">
+                        Agende sua Análise -->
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção do Método -->
+        <section id="method" class="py-16 md:py-24 bg-gray-200">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="section-title mx-auto text-3xl font-bold text-gray-900 mb-4">Nosso Método em 4 Etapas</h2>
+                <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+                    Nossa abordagem é clara, transparente e focada em resultados. Como um tratamento médico, seguimos um processo rigoroso para garantir a saúde plena do seu negócio.
+                </p>
+                <!-- Linha do tempo visual -->
+                <div class="flex flex-col md:flex-row justify-center items-center md:space-x-8 space-y-8 md:space-y-0 relative">
+                    <!-- Linha conectora para telas grandes -->
+                    <div class="hidden md:block absolute top-1/2 left-10 right-10 transform -translate-y-1/2 h-0.5 bg-gray-300"></div>
+                    <!-- Step 1: Diagnóstico -->
+                    <div class="relative z-10 w-full md:w-1/4 bg-white p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                        <div class="bg-cyan-400 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="font-bold text-lg">1</span>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Diagnóstico</h4>
+                        <p class="text-sm text-gray-600">Análise completa e consulta inicial para entender os sintomas e as causas dos problemas.</p>
+                    </div>
+                    <!-- Step 2: Prescrição -->
+                    <div class="relative z-10 w-full md:w-1/4 bg-white p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                        <div class="bg-cyan-400 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="font-bold text-lg">2</span>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Plano de Ação</h4>
+                        <p class="text-sm text-gray-600">Criação de um plano de tratamento personalizado e estratégico, com metas claras e ações definidas.</p>
+                    </div>
+                    <!-- Step 3: Tratamento -->
+                    <div class="relative z-10 w-full md:w-1/4 bg-white p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                        <div class="bg-cyan-400 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="font-bold text-lg">3</span>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Execução e Suporte</h4>
+                        <p class="text-sm text-gray-600">Implementação das estratégias com acompanhamento contínuo e suporte total da nossa equipe.</p>
+                    </div>
+                    <!-- Step 4: Crescimento -->
+                    <div class="relative z-10 w-full md:w-1/4 bg-white p-6 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                        <div class="bg-cyan-400 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="font-bold text-lg">4</span>
+                        </div>
+                        <h4 class="font-semibold text-lg mb-2">Crescimento Sustentável</h4>
+                        <p class="text-sm text-gray-600">Monitoramento dos resultados para garantir a saúde e o crescimento contínuo do seu negócio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Depoimentos/Casos de Sucesso -->
+        <section id="cases" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="section-title mx-auto text-3xl font-bold text-gray-900 mb-4">Depoimentos</h2>
+                <p class="text-gray-700 mb-12 max-w-2xl mx-auto">
+                    Nossa abordagem já ajudou empresas a encontrarem o caminho para o sucesso. Veja o que alguns de nossos parceiros dizem sobre a experiência com o Grupo Portel.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Depoimento 1 (Fictício) -->
+                    <div class="bg-white p-8 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                        <p class="text-lg italic text-gray-700 mb-4">
+                            "O Grupo Portel nos deu a clareza que precisávamos. Em poucas semanas, a equipe estava mais alinhada e as metas mais claras. Foi a melhor decisão para nossa empresa."
+                        </p>
+                        <div class="flex items-center justify-center space-x-4">
+                            <img src="imagens/joao.png" alt="Foto de João M." class="rounded-full w-16 h-16">
+                            <div class="text-left">
+                                <p class="font-semibold text-gray-900">João M.</p>
+                                <p class="text-sm text-gray-500">Gerente de Operações, InnovaTech Soluções</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Depoimento 2 (Fictício) -->
+                    <div class="bg-white p-8 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                        <p class="text-lg italic text-gray-700 mb-4">
+                            "A metodologia de ‘médico de negócios’ realmente funciona. Identificaram problemas que nem sabíamos que tínhamos e nos deram o caminho para resolvê-los. Incrível!"
+                        </p>
+                        <div class="flex items-center justify-center space-x-4">
+                            <img src="imagens/maria.png" alt="Foto de Maria L." class="rounded-full w-16 h-16">
+                            <div class="text-left">
+                                <p class="font-semibold text-gray-900">Maria L.</p>
+                                <p class="text-sm text-gray-500">Fundadora, Crescer Consultoria</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contact" class="py-16 md:py-24 bg-gray-200">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="section-title mx-auto text-3xl font-bold text-gray-900 mb-4">Fale Conosco</h2>
+                <p class="text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Pronto para dar o primeiro passo em direção à saúde do seu negócio? Preencha o formulário abaixo ou entre em contato direto.
+                </p>
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-md transform hover:scale-105 transition duration-300">
+                    <form action="https://formspree.io/f/xkgbwglk" method="POST" class="space-y-6">
+                        <div>
+                            <input type="text" id="name" name="name" placeholder="Seu Nome" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-200">
+                        </div>
+                        <div>
+                            <input type="email" id="email" name="email" placeholder="Seu E-mail" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-200">
+                        </div>
+                        <div>
+                            <input type="tel" id="phone" name="phone" placeholder="Seu Telefone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-200">
+                        </div>
+                        <div>
+                            <textarea id="message" name="message" rows="4" placeholder="Sua Mensagem" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 transition duration-200"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-cyan-400 text-white font-semibold rounded-lg shadow-md hover:bg-green-500 transition duration-300 cta-button">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                    <p class="mt-6 text-gray-600">
+                        ou entre em contato via <a href="https://wa.me/+5521997857460" target="_blank" class="text-green-500 hover:underline">WhatsApp</a>
+                    </p>
+                </div>
+                <div class="mt-8 flex justify-center space-x-4 text-gray-600">
+                    <a href="https://www.instagram.com/grupoportel" target="_blank" class="hover:text-blue-600 transition duration-300 hover:bg-cyan-400 transition duration-300 cta-button">
+                <img src="imagens/instagram.png" alt="Ícone do Instagram" class="h-6 w-6">
+                    </a>
+                    <a href="https://www.instagram.com/grupoportel" target="_blank" class="hover:text-blue-600 transition duration-300 hover:bg-cyan-400 transition duration-300 cta-button">
+                <img src="imagens/linkedin.png" alt="Ícone do LinkedIn" class="h-6 w-6">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botão Flutuante do WhatsApp -->
+                <a href="https://wa.me/+5521997857460" target="_blank" class="whatsapp-button bg-green-500 rounded-full p-3 shadow-lg hover:bg-cyan-400 transition duration-300 cta-button">
+            <img src="imagens/whatsapp.png" alt="Ícone do WhatsApp" class="h-8 w-8">
+                </a>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-2ww00 text-gray-100 py-8">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>&copy; 2025 Grupo Portel. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script para o menu mobile -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
