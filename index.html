@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- Vers�o: 0.5 -->
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -349,7 +348,13 @@ select.input-field option{background-color:var(--dark-card);color:var(--text)}
   .nav-menu{display:none}
   .nav-ctas{display:none}
   .hamburger{display:flex}
-  .hero-slide{flex-direction:column;padding:100px 24px 60px;text-align:center;align-items:center}
+  .hero-slide {
+    flex-direction: column;
+    padding: 100px 24px 60px;
+    text-align: center;
+    align-items: center;
+    background-image: none !important; /* Esta linha removerá a imagem nos celulares */
+  }
   .hero h1{font-size:36px}
   .hero-cta{justify-content:center}
   .section{padding:80px 24px}
@@ -1060,7 +1065,7 @@ select.input-field option{background-color:var(--dark-card);color:var(--text)}
   const htmlElement = document.documentElement;
   
   // Por padrão o site já carrega Claro. Logo, isDark começa como false.
-  let isDark = false;
+  let isDark = true; // Inverte o valor para que o clique inicial ative o tema escuro
 
   function updateThemeIcon() {
     if (isDark) {
