@@ -3,8 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="version" content="0.5">
-<title>Grupo Portel | Vendas, Previsibilidade e Escala</title>
+<meta name="version" content="0.6">
+<title>Grupo Portel | Estruturação e Implementação Comercial</title>
+<meta name="description" content="O Grupo Portel diagnostica gargalos e implementa jornadas, funis, CRM e processos comerciais para transformar oportunidades dispersas em crescimento organizado.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Grupo Portel">
+<meta name="theme-color" content="#080808">
+<link rel="canonical" href="https://grupoportel.pages.dev/">
+
+<meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Grupo Portel">
+<meta property="og:title" content="Estruturação e Implementação Comercial | Grupo Portel">
+<meta property="og:description" content="Descubra onde a sua operação perde oportunidades e como transformar o principal gargalo em um plano executável.">
+<meta property="og:url" content="https://grupoportel.pages.dev/">
+<meta property="og:image" content="https://grupoportel.pages.dev/Imagens/banner1.png">
+<meta property="og:image:alt" content="Grupo Portel — Estruturação e implementação comercial">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Estruturação e Implementação Comercial | Grupo Portel">
+<meta name="twitter:description" content="Organize a jornada de compra e transforme o principal gargalo comercial em uma implementação prioritária.">
+<meta name="twitter:image" content="https://grupoportel.pages.dev/Imagens/banner1.png">
 <link rel="icon" type="image/png" href="Imagens/logosite.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +30,42 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 
 <link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://grupoportel.pages.dev/#organization",
+      "name": "Grupo Portel",
+      "url": "https://grupoportel.pages.dev/",
+      "logo": "https://grupoportel.pages.dev/Imagens/logosite.png",
+      "description": "Assessoria de estruturação e implementação comercial para empresas que querem organizar sua jornada de compra e processo de vendas.",
+      "email": "timeportel@gmail.com",
+      "telephone": "+55-21-99785-7460",
+      "founder": {
+        "@type": "Person",
+        "name": "Guilherme Portel"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "telephone": "+55-21-99785-7460",
+        "email": "timeportel@gmail.com",
+        "availableLanguage": "Portuguese"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://grupoportel.pages.dev/#website",
+      "url": "https://grupoportel.pages.dev/",
+      "name": "Grupo Portel",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://grupoportel.pages.dev/#organization" }
+    }
+  ]
+}
+</script>
 </head>
 <body style="overflow: hidden;">
 
@@ -46,16 +100,16 @@
   <div class="nav-logo">GRUPO PORTEL</div>
   <div class="nav-menu">
     <a href="#hero" class="nav-btn">Início</a>
-    <a href="#metodo" class="nav-btn">O Método</a>
-    <a href="#jornada-consumidor" class="nav-btn">A Jornada</a>
-    <a href="#diretoria" class="nav-btn">A Diretoria</a>
-    <a href="#sobre" class="nav-btn">Sobre Nós</a>
+    <a href="#metodo" class="nav-btn">Como funciona</a>
+    <a href="#jornada-consumidor" class="nav-btn">A jornada</a>
+    <a href="#segmentos" class="nav-btn">Para quem</a>
+    <a href="#diretoria" class="nav-btn">Quem lidera</a>
   </div>
   <div class="nav-ctas">
     <button id="themeToggle" aria-label="Alternar Tema Escuro/Claro">
       <i data-lucide="moon" class="w-5 h-5"></i>
     </button>
-    <a href="#diagnostico" class="btn-primary">Solicitar Diagnóstico Gratuito</a>
+    <a href="#diagnostico" class="btn-primary">Solicitar avaliação</a>
   </div>
   <button class="hamburger" id="menuBtn" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -68,13 +122,15 @@
     <div class="hero-slide hero-slide-1" style="background-image: url('Imagens/banner1.png');">
   
   <div class="hero-content">
-    <div class="hero-badge tracking-widest-label"><div class="led-wrapper"><div class="led-pulse"></div><div class="led-core"></div></div>Engenharia de Vendas</div>
-    <h1 class="tracking-tight-heading">Previsibilidade de faturamento<br><em class="text-gradient-vazado">sem atrair curiosos</em></h1>
+    <div class="hero-badge tracking-widest-label"><div class="led-wrapper"><div class="led-pulse"></div><div class="led-core"></div></div>Estruturação e implementação comercial</div>
+    <h1 class="tracking-tight-heading">Transforme oportunidades dispersas<br><em class="text-gradient-vazado">em uma jornada que vende.</em></h1>
     <div class="hero-divider"></div>
-    <p>Estruturamos jornadas de compra completas para empresas sólidas e negócios locais premium. A nossa meta não é encher o seu WhatsApp de curiosos. Nós desenvolvemos funis de vendas cirúrgicos para atrair e reter clientes de alto valor, trazendo verdadeira previsibilidade financeira para a sua operação.</p>
+    <p>O Grupo Portel identifica onde a sua operação perde oportunidades e implementa o sistema necessário para organizar aquisição, oferta, CRM, vendas, retenção e crescimento.</p>
     <div class="hero-cta">
-      <a href="#diagnostico" class="btn-animated-border"><span style="position:relative; z-index:10; display:flex; align-items:center; gap:8px;">Análise Gratuita<i data-lucide="arrow-right" class="w-5 h-5"></i></span></a>
+      <a href="#diagnostico" class="btn-animated-border"><span style="position:relative; z-index:10; display:flex; align-items:center; gap:8px;">Descobrir meu principal gargalo<i data-lucide="arrow-right" class="w-5 h-5"></i></span></a>
+      <a href="#metodo" class="hero-btn-secondary">Ver como estruturamos</a>
     </div>
+    <p class="hero-fineprint">Para empresas que já vendem, reconhecem um problema comercial e têm disposição para participar da implementação.</p>
   </div>
   
   </div>
@@ -82,12 +138,12 @@
     <div class="hero-slide hero-slide-2" style="background-image: url('Imagens/banner2.png');">
   
   <div class="hero-content">
-    <div class="hero-badge tracking-widest-label"><div class="led-wrapper"><div class="led-pulse"></div><div class="led-core"></div></div>Jornadas de Compra</div>
-    <h1 class="tracking-tight-heading">Menos métricas perdidas,<br><em class="text-gradient-vazado">mais vendas concluídas.</em></h1>
+    <div class="hero-badge tracking-widest-label"><div class="led-wrapper"><div class="led-pulse"></div><div class="led-core"></div></div>Jornada de compra</div>
+    <h2 class="tracking-tight-heading">Em qual das 14 áreas<br><em class="text-gradient-vazado">a sua operação está travando?</em></h2>
     <div class="hero-divider"></div>
-    <p>Não somos uma empresa de tráfego pago, somos um ecossistema que trabalha para aumentar o seu faturamento de maneira consistente. Não nos baseamos em métricas de vaidade, pois no nosso jogo o resultado é sempre mensurável: leads são leads e vendas são vendas. O nosso único objetivo é colocar dinheiro no bolso do dono.</p>
+    <p>Marca, oferta, presença, funil, CRM, vendas e retenção podem parecer problemas separados. Nós conectamos os sinais para encontrar o gargalo que deve ser resolvido primeiro.</p>
     <div class="hero-cta">
-      <a href="#diagnostico" class="btn-animated-border"><span style="position:relative; z-index:10; display:flex; align-items:center; gap:8px;">Quero Minha Jornada<i data-lucide="arrow-right" class="w-5 h-5"></i></span></a>
+      <a href="#diagnostico" class="btn-animated-border"><span style="position:relative; z-index:10; display:flex; align-items:center; gap:8px;">Avaliar minha operação<i data-lucide="arrow-right" class="w-5 h-5"></i></span></a>
     </div>
   </div>
   
@@ -97,23 +153,23 @@
   
   <div class="hero-content">
     <div class="hero-badge tracking-widest-label">
-        <span></span> Premium B2B
+        <span></span> Operação comercial
       </div>
-      <h1 class="tracking-tight-heading">Construa um Setor Comercial <br><em class="text-gradient-vazado">Escalável e Previsível</em></h1>
+      <h2 class="tracking-tight-heading">Uma prioridade por vez.<br><em class="text-gradient-vazado">Da decisão à implementação.</em></h2>
       <div class="hero-divider"></div>
-      <p>Nós assumimos a responsabilidade de estruturar seu CRM, roteiros e equipe para que você foque apenas em expandir seu negócio de Alto Ticket.</p>
+      <p>O diagnóstico aponta a prioridade. A implementação transforma essa decisão em ativos, processos, responsáveis, prazos e indicadores que a empresa consegue acompanhar.</p>
       
       <div class="hero-cta">
-        <a href="#contato" class="btn-animated-border">
-          <span style="position:relative; z-index:10; display:flex; align-items:center; gap:8px;">Solicitar Diagnóstico Gratuito <i data-lucide="arrow-right"></i></span>
+        <a href="#diagnostico" class="btn-animated-border">
+          <span style="position:relative; z-index:10; display:flex; align-items:center; gap:8px;">Conhecer o próximo passo <i data-lucide="arrow-right"></i></span>
         </a>
       </div>
   </div>
   
   </div>
 </div> <div class="hero-arrows">
-    <button class="hero-arrow" id="heroPrev"><i data-lucide="chevron-left"></i></button>
-    <button class="hero-arrow" id="heroNext"><i data-lucide="chevron-right"></i></button>
+    <button class="hero-arrow" id="heroPrev" aria-label="Mostrar mensagem anterior"><i data-lucide="chevron-left"></i></button>
+    <button class="hero-arrow" id="heroNext" aria-label="Mostrar próxima mensagem"><i data-lucide="chevron-right"></i></button>
   </div>
   <div class="hero-nav-dots" id="heroDots">
     <div class="hero-dot active" data-idx="0"></div>
@@ -124,23 +180,23 @@
 
 <div class="numbers-grid">
   <div class="num-item">
-    <div class="num-value">+1000</div>
-    <div class="num-label">Jornadas de compra</div>
+    <div class="num-value">4</div>
+    <div class="num-label">Fases do método</div>
   </div>
   <div class="num-item">
-    <div class="num-value">+500</div>
-    <div class="num-label">Empresas Análisadas</div>
+    <div class="num-value">14</div>
+    <div class="num-label">Áreas possíveis de diagnóstico</div>
   </div>
   <div class="num-item">
-    <div class="num-value">9:59h</div>
-    <div class="num-label">Tempo Máx. p/ Contato</div>
+    <div class="num-value">1</div>
+    <div class="num-label">Prioridade central por implementação</div>
   </div>
 </div>
 
 <section class="section section-dark bg-clean" id="sobre">
   <div class="section-header reveal-up">
-    <h2 class="section-title">Quem é o <em class="text-gradient">Grupo Portel</em>?</h2>
-    <p class="section-sub">Não somos uma agência de marketing digital. Somos uma assessoria de vendas focada em resultado e crescimento sustentável.</p>
+    <h2 class="section-title">Engenharia de vendas, <em class="text-gradient">não ações isoladas</em></h2>
+    <p class="section-sub">O Grupo Portel conecta estratégia e execução para transformar aquisição, pré-venda e fechamento em uma operação comercial única.</p>
   </div>
   
   <div class="sobre-grid reveal-up">
@@ -156,14 +212,14 @@
     </div>
     
     <div class="sobre-content">
-      <h3>Construindo máquinas de aquisição reais.</h3>
-      <p>Com mais de 2 anos de atuação e centenas de empresas impactadas, o Grupo Portel nasceu da necessidade de entregar o que o mercado corporativo realmente precisa: <strong>dinheiro no caixa</strong>.</p>
-      <p>Nós entendemos que negócios não sobrevivem com base em "receitas prontas" de internet. Eles precisam de um diagnóstico preciso, treinamento comercial de elite e estratégias de marketing focadas em conversão, e não em métricas de vaidade.</p>
+      <h3>Da atenção à receita, cada etapa precisa cumprir uma função.</h3>
+      <p>O Grupo Portel nasceu para resolver um problema recorrente: empresas investem em marketing, ferramentas e equipe, mas perdem oportunidades porque essas partes não operam como um sistema.</p>
+      <p>Entramos na operação para identificar vazamentos, construir os ativos necessários e criar uma rotina comercial orientada por dados — sem fórmulas prontas ou relatórios que não levam a uma decisão.</p>
       
       <ul class="sobre-list">
-        <li><i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i> Foco 100% em ROI (Retorno sobre Investimento)</li>
-        <li><i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i> Processos comerciais validados no campo de batalha</li>
-        <li><i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i> Substituímos o "achismo" por dados analíticos</li>
+        <li><i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i> Diagnóstico do funil e dos pontos de perda de receita</li>
+        <li><i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i> Implementação de CRM, mensagens, roteiros e processos</li>
+        <li><i data-lucide="check-circle" style="color: var(--gold); width: 20px; height: 20px;"></i> Indicadores para decidir onde agir e onde escalar</li>
       </ul>
     </div>
   </div>
@@ -171,37 +227,37 @@
 
 <section class="section section-cream" id="metodo">
   <div class="section-header reveal-up">
-    <h2 class="section-title">O Método <em>Grupo Portel</em></h2>
-    <p class="section-sub">Sem "receitinhas de bolo". Um processo 100% focado em vendas baseado em quatro etapas validadas para escalar negócios robustos.</p>
+    <h2 class="section-title">Um método para sair do <em>improviso</em></h2>
+    <p class="section-sub">Quatro fases para diagnosticar a jornada, corrigir os gargalos e escalar apenas o que já provou gerar resultado.</p>
   </div>
   <div class="eco-grid">
     <div class="eco-card reveal-up hover-float">
       <span class="eco-step tracking-widest-label">1º Fase</span>
       <h3>Exploração</h3>
-      <p>Um processo rigoroso de testes ofertando seu produto de diferentes maneiras, canais e públicos. Coletamos dados para descobrir onde está a "mina de ouro" do seu negócio.</p>
+      <p>Mapeamos oferta, canais, mensagens, CRM, equipe e indicadores para localizar o ponto que mais limita a receita hoje.</p>
     </div>
     <div class="eco-card reveal-up hover-float">
       <span class="eco-step tracking-widest-label">2º Fase</span>
       <h3>Lapidação</h3>
-      <p>Agora que sabemos o que funciona, o próximo passo é otimizar os resultados. Eliminamos gargalos e melhoramos a conversão. É o famoso "fazer mais com menos".</p>
+      <p>Construímos e ajustamos os ativos que faltam: páginas, campanhas, qualificação, roteiros, automações e rotina comercial.</p>
     </div>
     <div class="eco-card reveal-up hover-float">
       <span class="eco-step tracking-widest-label">3º Fase</span>
       <h3>Escala</h3>
-      <p>Com um funil validado e previsível, começamos a injetar mais capital nas campanhas campeãs e expandir a equipe comercial. Aqui, a máquina começa a girar com lucro constante e escalável.</p>
+      <p>Com o processo validado, ampliamos investimento, volume e capacidade comercial sem perder controle sobre qualidade e conversão.</p>
     </div>
     <div class="eco-card reveal-up hover-float">
       <span class="eco-step tracking-widest-label">4º Fase</span>
       <h3>Extração</h3>
-      <p>Chegamos ao ponto ótimo da operação. Implementamos táticas de upsell, cross-sell e retenção (LTV) para maximizar a extração de lucro líquido em cima da base de clientes construída ao longo da jornada.</p>
+      <p>Ativamos retenção, recompra, upsell e cross-sell para aumentar o valor da base conquistada e reduzir a dependência de novas vendas.</p>
     </div>
   </div>
 </section>
 
 <section class="section section-dark bg-clean" id="segmentos">
   <div class="section-header reveal-up">
-    <h2 class="section-title">Segmentos com <em>Maior Tração</em></h2>
-    <p class="section-sub">Nossa metodologia foi desenhada para vendas complexas e de alto valor. Se a sua empresa está em um destes setores, o modelo de escala é perfeitamente aplicável.</p>
+    <h2 class="section-title">Para empresas com vendas <em>complexas ou de alto valor</em></h2>
+    <p class="section-sub">A metodologia é indicada para operações em que confiança, qualificação e processo comercial têm impacto direto na decisão de compra.</p>
   </div>
   
   <div class="segments-grid reveal-up">
@@ -245,32 +301,32 @@
 
 <section class="section section-dark" id="jornada-consumidor">
   <div class="section-header reveal-up">
-    <h2 class="section-title">A Jornada de <em>Aquisição</em></h2>
-    <p class="section-sub">Entenda exatamente como operamos em cada etapa do funil para transformar desconhecidos em clientes fiéis e recorrentes.</p>
+    <h2 class="section-title">A jornada precisa trabalhar <em>antes da reunião</em></h2>
+    <p class="section-sub">Cada etapa prepara a próxima decisão. Assim, o vendedor recebe oportunidades com mais contexto e não precisa reconstruir valor do zero.</p>
   </div>
 
   <div class="funnel-dashboard box-glow reveal-up" style="display: flex; gap: 40px; padding: 40px; align-items: center; border-radius: 24px; background: var(--dark-card); border: 1px solid var(--border-light);">
     
     <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px;">
-      <p style="font-size: 12px; color: var(--muted); text-transform: uppercase; font-weight: 700; margin-bottom: 16px; text-align: center;">Primeiro contato</p>
+      <p style="font-size: 12px; color: var(--muted); text-transform: uppercase; font-weight: 700; margin-bottom: 16px; text-align: center;">Do primeiro contato</p>
       
-      <div class="funnel-layer active" data-stage="descoberta" style="width: 100%; background: var(--gold); opacity: 1;">
-        Descoberta
+      <div class="funnel-layer active" data-stage="aquisicao" style="width: 100%; background: var(--gold); opacity: 1;">
+        Aquisição
       </div>
-      <div class="funnel-layer" data-stage="interesse" style="width: 85%; background: var(--gold); opacity: 0.8;">
-        Interesse
+      <div class="funnel-layer" data-stage="aquecimento" style="width: 85%; background: var(--gold); opacity: 0.8;">
+        Aquecimento
       </div>
-      <div class="funnel-layer" data-stage="desejo" style="width: 70%; background: var(--gold); opacity: 0.6;">
-        Desejo
+      <div class="funnel-layer" data-stage="pre-venda" style="width: 70%; background: var(--gold); opacity: 0.6;">
+        Pré-venda
       </div>
-      <div class="funnel-layer" data-stage="venda" style="width: 55%; background: var(--gold); opacity: 0.4;">
-        Venda
+      <div class="funnel-layer" data-stage="reuniao" style="width: 55%; background: var(--gold); opacity: 0.4;">
+        Reunião
       </div>
-      <div class="funnel-layer" data-stage="pos-venda" style="width: 40%; background: var(--gold); opacity: 0.2;">
-        Pós-Venda
+      <div class="funnel-layer" data-stage="receita" style="width: 40%; background: var(--gold); opacity: 0.2;">
+        Receita
       </div>
 
-      <p style="font-size: 12px; color: var(--muted); text-transform: uppercase; font-weight: 700; margin-top: 16px; text-align: center;">Fidelização</p>
+      <p style="font-size: 12px; color: var(--muted); text-transform: uppercase; font-weight: 700; margin-top: 16px; text-align: center;">À receita previsível</p>
     </div>
 
     <div style="flex: 1.5; background: var(--dark); border: 1px solid var(--border-light); border-radius: 16px; padding: 40px; min-height: 350px; display: flex; flex-direction: column; justify-content: center;">
@@ -279,7 +335,7 @@
         </div>
       
       <a href="#diagnostico" class="btn-primary" style="display: inline-block; width: fit-content; margin-top: 32px; padding: 12px 24px;">
-        Aplicar isso no meu negócio
+        Mapear minha jornada comercial
       </a>
     </div>
 
@@ -288,100 +344,96 @@
 
 <section class="section section-cream bg-clean" id="diferencial">
   <div class="section-header reveal-up">
-    <h2 class="section-title">Por que não temos <em>planos fixos</em>?</h2>
-    <p class="section-sub">Diferente do mercado que vende pacotes "Black, Gold e Platinum", nós entregamos soluções sob medida para o seu segmento.</p>
+    <h2 class="section-title">O escopo nasce do <em>gargalo</em>, não de um pacote</h2>
+    <p class="section-sub">Cada empresa perde receita em um ponto diferente. Por isso, o trabalho começa pelo diagnóstico e prioriza o que tem maior potencial de impacto.</p>
   </div>
   <div style="max-width: 800px; margin: 0 auto; background: var(--dark-card); padding: 40px; border-radius: 20px; border: 1px solid var(--border-light); box-shadow: var(--glow); text-align: center;">
     <i data-lucide="layers" style="width: 48px; height: 48px; color: var(--gold); margin: 0 auto 24px;"></i>
-    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 24px; color: var(--text); margin-bottom: 16px;">Diagnóstico e Plano Exclusivos</h3>
+    <h3 style="font-family: 'Montserrat', sans-serif; font-size: 24px; color: var(--text); margin-bottom: 16px;">Diagnóstico antes da prescrição</h3>
     <p style="color: var(--muted); font-size: 16px; line-height: 1.7; font-weight: 500;">
-      Entendemos que negócios B2B não funcionam com "receitinhas de bolo" copiadas de outras empresas. O nosso trabalho começa com uma imersão profunda na sua operação para criar um processo de marketing e vendas personalizado de ponta a ponta.
+      Podemos começar por aquisição, qualificação, CRM, reunião, gestão ou retenção. O critério não é o tamanho do pacote: é a capacidade de remover o gargalo que impede a operação de avançar.
     </p>
   </div>
 </section>
 
-<section class="section section-cream">
+<section class="section section-cream" id="proximo-passo">
   <div class="section-header reveal-up">
-    <h2 class="section-title">O verdadeiro custo de <em>escalar</em></h2>
-    <p class="section-sub">Quais profissionais você precisa para executar este plano? E quanto você paga por cada um deles NO MERCADO?</p>
+    <h2 class="section-title">Você não compra um pacote. <em>Avança por decisões claras.</em></h2>
+    <p class="section-sub">A jornada comercial começa pequena, valida a prioridade e só depois transforma o diagnóstico em implementação.</p>
   </div>
 
   <div class="pricing-grid reveal-up">
     <div class="price-card">
-      <div class="price-icon"><i data-lucide="user-check"></i></div>
-      <div class="price-role">Líder de Vendas</div>
-      <div class="price-desc">Para conduzir e treinar o time.</div>
-      <div class="price-value">R$ 5.000/mês</div>
+      <div class="price-icon"><i data-lucide="messages-square"></i></div>
+      <div class="price-role">1. Avaliação inicial</div>
+      <div class="price-desc">Entendemos o momento da empresa, o problema percebido e se existe aderência ao nosso método.</div>
+      <div class="price-value">Sem custo</div>
     </div>
     <div class="price-card">
-      <div class="price-icon"><i data-lucide="pen-tool"></i></div>
-      <div class="price-role">Copywriter</div>
-      <div class="price-desc">Textos persuasivos que vendem.</div>
-      <div class="price-value">R$ 3.500/mês</div>
+      <div class="price-icon"><i data-lucide="scan-search"></i></div>
+      <div class="price-role">2. Plano de Ação Estratégico</div>
+      <div class="price-desc">Diagnosticamos as áreas relevantes, priorizamos o gargalo e entregamos um plano claro de decisão.</div>
+      <div class="price-value">R$ 497</div>
     </div>
     <div class="price-card">
-      <div class="price-icon"><i data-lucide="bar-chart"></i></div>
-      <div class="price-role">Gestor de Tráfego</div>
-      <div class="price-desc">Anúncios qualificados na internet.</div>
-      <div class="price-value">R$ 2.500/mês</div>
-    </div>
-    <div class="price-card">
-      <div class="price-icon"><i data-lucide="video"></i></div>
-      <div class="price-role">Editor de Vídeo</div>
-      <div class="price-desc">Visuais que engajam e convertem.</div>
-      <div class="price-value">R$ 2.500/mês</div>
-    </div>
-    <div class="price-card">
-      <div class="price-icon"><i data-lucide="briefcase"></i></div>
-      <div class="price-role">Gestor de Projetos</div>
-      <div class="price-desc">Lidera e amarra todas as pontas.</div>
-      <div class="price-value">R$ 7.500/mês</div>
+      <div class="price-icon"><i data-lucide="blocks"></i></div>
+      <div class="price-role">3. Implementação Prioritária</div>
+      <div class="price-desc">Construímos os ativos e processos indispensáveis para colocar a prioridade escolhida em funcionamento.</div>
+      <div class="price-value">A partir de R$ 3.000</div>
     </div>
   </div>
 
   <div class="price-final box-glow reveal-up">
-    <h3>Custo da Equipe: R$ 21.000,00/mês</h3>
-    <p style="color: var(--muted); margin-bottom: 20px;">Quanto você paga por todo esse ecossistema executando pelo seu negócio dentro do Grupo Portel?</p>
-    <div class="big-price text-glow">R$ ???</div>
-    <p style="font-size: 14px; color: var(--gold); font-weight: 700;">Faça o diagnóstico e descubra um modelo insano de Custo x Benefício.</p>
+    <h3>Clareza antes do investimento</h3>
+    <p style="color: var(--muted); margin-bottom: 20px;">A implementação só é apresentada quando a prioridade está demonstrada. Escopo, entregáveis, responsabilidades, dependências e próximos marcos ficam definidos antes do início.</p>
+    <div class="big-price text-glow">Sem pacote genérico</div>
+    <p style="font-size: 14px; color: var(--gold); font-weight: 700; margin-bottom: 24px;">Você entende o problema, o plano e o papel de cada parte antes de decidir.</p>
+    <a href="#diagnostico" class="btn-primary" style="display:inline-block; padding:14px 24px;">Solicitar avaliação inicial</a>
   </div>
 </section>
-
 <section class="section section-dark" id="diagnostico">
   <div class="section-header reveal-up">
-    <h2 class="section-title">Solicite seu <em>Diagnóstico Gratuito</em></h2>
-    <p class="section-sub">Preencha o formulário rigoroso abaixo. Em até 8h um de nossos especialistas analisará os dados e entrará em contato.</p>
+    <h2 class="section-title">Qual é o principal gargalo <em>do seu crescimento?</em></h2>
+    <p class="section-sub">A avaliação inicial é sem custo. Em até 10 horas úteis, analisamos as informações e entramos em contato para verificar aderência e indicar o próximo passo.</p>
   </div>
 
   <div style="max-width: 700px; margin: 0 auto;">
+    <div class="qualification-note reveal-up">
+      <h3>Esta conversa faz mais sentido quando:</h3>
+      <ul>
+        <li><i data-lucide="check-circle"></i> a empresa já possui uma oferta validada e clientes;</li>
+        <li><i data-lucide="check-circle"></i> existe um problema comercial relevante e reconhecido;</li>
+        <li><i data-lucide="check-circle"></i> o decisor participa e há capacidade para executar mudanças.</li>
+      </ul>
+    </div>
     <div class="form-wrapper reveal-up">
-      <form id="leadForm">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <form id="leadForm" aria-label="Solicitação de avaliação comercial inicial">
+        <div class="form-row">
           <div>
-            <label class="input-label">Nome Completo</label>
-            <input type="text" name="Nome" required class="input-field" placeholder="Seu nome">
+            <label class="input-label" for="leadNome">Nome completo</label>
+            <input id="leadNome" type="text" name="Nome" required autocomplete="name" class="input-field" placeholder="Seu nome">
           </div>
           <div>
-            <label class="input-label">E-mail Corporativo</label>
-            <input type="email" name="Email" required class="input-field" placeholder="seu@email.com">
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-          <div>
-            <label class="input-label">WhatsApp (DDD + Número)</label>
-            <input type="tel" name="Telefone" required class="input-field" placeholder="(00) 00000-0000">
-          </div>
-          <div>
-            <label class="input-label">Nome da Empresa</label>
-            <input type="text" name="Empresa" required class="input-field" placeholder="Sua empresa">
+            <label class="input-label" for="leadEmail">E-mail corporativo</label>
+            <input id="leadEmail" type="email" name="Email" required autocomplete="email" class="input-field" placeholder="seu@email.com">
           </div>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="form-row">
           <div>
-            <label class="input-label">Setor de Atuação</label>
-            <select name="Setor" required class="input-field">
+            <label class="input-label" for="leadTelefone">WhatsApp (DDD + número)</label>
+            <input id="leadTelefone" type="tel" name="Telefone" required autocomplete="tel" class="input-field" placeholder="(00) 00000-0000">
+          </div>
+          <div>
+            <label class="input-label" for="leadEmpresa">Nome da empresa</label>
+            <input id="leadEmpresa" type="text" name="Empresa" required autocomplete="organization" class="input-field" placeholder="Sua empresa">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label class="input-label" for="leadSetor">Setor de atuação</label>
+            <select id="leadSetor" name="Setor" required class="input-field">
                 <option value="" disabled selected>Selecione seu setor</option>
                 <option value="Serviços B2B">Serviços B2B</option>
                 <option value="Indústria">Indústria / Manufatura</option>
@@ -392,8 +444,8 @@
             </select>
           </div>
           <div>
-            <label class="input-label">Faturamento Mensal Estimado</label>
-            <select name="Faturamento" required class="input-field">
+            <label class="input-label" for="leadFaturamento">Faturamento mensal estimado</label>
+            <select id="leadFaturamento" name="Faturamento" required class="input-field">
                 <option value="" disabled selected>Selecione a faixa</option>
                 <option value="Até R$ 50k">Até R$ 50k</option>
                 <option value="R$ 51k a R$ 200k">R$ 51k a R$ 200k</option>
@@ -403,11 +455,24 @@
           </div>
         </div>
 
+        <div>
+          <label class="input-label" for="leadGargalo">Principal gargalo percebido hoje</label>
+          <select id="leadGargalo" name="Gargalo" required class="input-field">
+            <option value="" disabled selected>Selecione o principal desafio</option>
+            <option value="Posicionamento ou oferta">Posicionamento ou oferta pouco clara</option>
+            <option value="Aquisição">Poucas oportunidades ou dependência de indicação</option>
+            <option value="Funil ou CRM">Leads se perdem no funil ou no CRM</option>
+            <option value="Conversão comercial">Baixa conversão em reuniões e propostas</option>
+            <option value="Retenção ou recompra">Pouca retenção, recompra ou indicação</option>
+            <option value="Sem clareza">Ainda não sei onde está o gargalo</option>
+          </select>
+        </div>
+
         <button type="submit" id="submitBtn" class="btn-primary" style="width: 100%; margin-top: 10px; padding: 18px; font-size: 16px;">
-          Enviar Dados para o Especialista
+          Solicitar avaliação inicial
         </button>
-        <div style="text-align: right; margin-top: 12px; font-size: 11px; color: var(--muted); display:flex; justify-content:flex-end; align-items:center; gap:4px">
-          <i data-lucide="shield-check" style="width:14px; height:14px"></i> Seus dados estão seguros.
+        <div class="form-privacy">
+          <i data-lucide="shield-check"></i> Seus dados serão usados apenas para este contato. Se houver aderência, o Plano de Ação Estratégico de R$ 497 será apresentado sem obrigação de contratação. Consulte a <a href="privacidade.html">Política de Privacidade</a>.
         </div>
       </form>
     </div>
@@ -416,59 +481,51 @@
 
 <section class="section section-dark bg-clean" id="insights">
   <div class="section-header reveal-up">
-    <h2 class="section-title">Insights & <em>Estratégia</em></h2>
-    <p class="section-sub">Conteúdos práticos e direto ao ponto para escalar sua operação comercial hoje mesmo.</p>
+    <h2 class="section-title">Onde a receita costuma <em>vazar</em></h2>
+    <p class="section-sub">O problema raramente está em uma única campanha. Ele aparece quando uma etapa da jornada não prepara a próxima.</p>
   </div>
   
   <div class="eco-grid"> <div class="eco-card" style="padding: 0;">
       <div style="width: 100%; height: 160px; background: var(--input-bg); display:flex; align-items:center; justify-content:center;">
-        <i data-lucide="image" style="color: var(--muted)"></i>
+        <i data-lucide="target" style="color: var(--gold)"></i>
       </div>
       <div style="padding: 24px;">
-        <span class="eco-step">Vendas B2B</span>
-        <h3 style="font-size: 18px;">Como perder o medo de ouvir "Não" na prospecção ativa</h3>
-        <a href="#" style="color: var(--gold); font-size: 13px; font-weight: 700; display:flex; align-items:center; gap:6px; margin-top: 16px;">
-          Ler Artigo <i data-lucide="arrow-right" style="width:14px; height:14px;"></i>
-        </a>
+        <span class="eco-step">Aquisição</span>
+        <h3 style="font-size: 18px;">O volume cresce, mas poucos leads têm perfil ou intenção.</h3>
+        <p style="color:var(--muted); margin-top:16px;">A promessa atrai atenção, porém não filtra quem realmente pode avançar na compra.</p>
       </div>
     </div>
     
     <div class="eco-card" style="padding: 0;">
       <div style="width: 100%; height: 160px; background: var(--input-bg); display:flex; align-items:center; justify-content:center;">
-        <i data-lucide="image" style="color: var(--muted)"></i>
+        <i data-lucide="message-square-text" style="color: var(--gold)"></i>
       </div>
       <div style="padding: 24px;">
-        <span class="eco-step">Gestão Comercial</span>
-        <h3 style="font-size: 18px;">Métricas de vaidade vs. Dinheiro no caixa: O que analisar?</h3>
-        <a href="#" style="color: var(--gold); font-size: 13px; font-weight: 700; display:flex; align-items:center; gap:6px; margin-top: 16px;">
-          Ler Artigo <i data-lucide="arrow-right" style="width:14px; height:14px;"></i>
-        </a>
+        <span class="eco-step">Aquecimento</span>
+        <h3 style="font-size: 18px;">O conteúdo informa, mas não prepara a decisão comercial.</h3>
+        <p style="color:var(--muted); margin-top:16px;">A marca publica, mas o lead ainda chega sem perceber urgência, diferença ou valor.</p>
       </div>
     </div>
 
     <div class="eco-card" style="padding: 0;">
       <div style="width: 100%; height: 160px; background: var(--input-bg); display:flex; align-items:center; justify-content:center;">
-        <i data-lucide="image" style="color: var(--muted)"></i>
+        <i data-lucide="list-checks" style="color: var(--gold)"></i>
       </div>
       <div style="padding: 24px;">
-        <span class="eco-step">Marketing Digital</span>
-        <h3 style="font-size: 18px;">O que é jornada de compra e como criar a uma</h3>
-        <a href="#" style="color: var(--gold); font-size: 13px; font-weight: 700; display:flex; align-items:center; gap:6px; margin-top: 16px;">
-          Ler Artigo <i data-lucide="arrow-right" style="width:14px; height:14px;"></i>
-        </a>
+        <span class="eco-step">Pré-venda</span>
+        <h3 style="font-size: 18px;">A agenda enche, mas a reunião começa sem contexto.</h3>
+        <p style="color:var(--muted); margin-top:16px;">Sem critérios e perguntas claras, o SDR transfere contatos em vez de oportunidades.</p>
       </div>
     </div>
     
     <div class="eco-card" style="padding: 0;">
       <div style="width: 100%; height: 160px; background: var(--input-bg); display:flex; align-items:center; justify-content:center;">
-        <i data-lucide="image" style="color: var(--muted)"></i>
+        <i data-lucide="handshake" style="color: var(--gold)"></i>
       </div>
       <div style="padding: 24px;">
-        <span class="eco-step">Marketing Digital</span>
-        <h3 style="font-size: 18px;">Por que o seu time comercial não consegue fechar os leads?</h3>
-        <a href="#" style="color: var(--gold); font-size: 13px; font-weight: 700; display:flex; align-items:center; gap:6px; margin-top: 16px;">
-          Ler Artigo <i data-lucide="arrow-right" style="width:14px; height:14px;"></i>
-        </a>
+        <span class="eco-step">Fechamento</span>
+        <h3 style="font-size: 18px;">O vendedor explica demais e diagnostica de menos.</h3>
+        <p style="color:var(--muted); margin-top:16px;">A call precisa reconstruir confiança do zero, alongando o ciclo e pressionando a negociação.</p>
       </div>
     </div>
   </div>
@@ -476,8 +533,8 @@
 
 <section class="section section-dark" id="diretoria">
   <div class="section-header reveal-up">
-    <h2 class="section-title">Quem está à frente do <em class="text-gradient">Grupo Portel</em>?</h2>
-    <p class="section-sub">Você não será repassado para gerentes juniores. Todo o planejamento estratégico e a execução da metodologia são liderados diretamente pelo fundador.</p>
+    <h2 class="section-title">Estratégia liderada por quem <em class="text-gradient">responde pela operação</em></h2>
+    <p class="section-sub">O planejamento estratégico e a condução da metodologia são liderados diretamente pelo fundador, com acompanhamento próximo das decisões críticas.</p>
   </div>
 
   <div class="mentors-wrap">
@@ -504,29 +561,38 @@
   <div class="faq-list">
     <div class="faq-item">
       <div class="faq-question">
-        A assessoria serve para o meu nicho de mercado?
+        Para quais empresas a assessoria é indicada?
         <div class="faq-icon"><i data-lucide="plus"></i></div>
       </div>
       <div class="faq-answer">
-        <p>Se o seu modelo de negócio é B2B (vende para outras empresas) ou B2C de Alto Ticket, sim. Nossa metodologia não depende de nicho, mas sim de fundamentos de vendas corporativas. Adaptamos a fase de "Exploração" especificamente para descobrir a tração no seu segmento.</p>
+        <p>Para empresas que já possuem uma oferta validada e clientes, reconhecem um problema comercial relevante e querem organizar a jornada de compra. A avaliação inicial verifica se o momento e o modelo da operação têm aderência ao trabalho.</p>
       </div>
     </div>
     <div class="faq-item">
       <div class="faq-question">
-        Vocês executam o trabalho ou apenas dão conselhos (Mentoria)?
+        Vocês implementam ou apenas orientam a equipe?
         <div class="faq-icon"><i data-lucide="plus"></i></div>
       </div>
       <div class="faq-answer">
-        <p>Nós somos uma Assessoria de Implementação. Ao contrário de uma consultoria que apenas entrega um PDF com regras, nossa equipe entra na operação do seu negócio. Montamos as campanhas, estruturamos o CRM e treinamos ativamente o seu time comercial através de roleplays e feedbacks de ligações.</p>
+        <p>Somos uma assessoria de implementação. Além de orientar, construímos os ativos definidos no escopo, estruturamos o CRM, apoiamos campanhas e treinamos o time comercial com acompanhamento da execução.</p>
       </div>
     </div>
     <div class="faq-item">
       <div class="faq-question">
-        Qual o tempo mínimo de contrato?
+        Quanto tempo dura uma implementação?
         <div class="faq-icon"><i data-lucide="plus"></i></div>
       </div>
       <div class="faq-answer">
-        <p>Para passarmos pelas 4 fases do método (Exploração, Lapidação, Escala e Extração) e garantirmos um resultado sustentável, trabalhamos com ciclos mínimos definidos no momento do seu Diagnóstico de Viabilidade, variando de acordo com a maturidade atual da sua empresa.</p>
+        <p>O ciclo é definido depois do Plano de Ação Estratégico, porque depende do gargalo, da maturidade da operação e do volume de implementação necessário. Prazo, escopo e responsabilidades são apresentados antes da contratação.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        A avaliação inicial já é o diagnóstico completo?
+        <div class="faq-icon"><i data-lucide="plus"></i></div>
+      </div>
+      <div class="faq-answer">
+        <p>Não. A avaliação inicial é uma conversa sem custo para entender o cenário e verificar aderência. O diagnóstico completo acontece no Plano de Ação Estratégico de R$ 497, que analisa as áreas relevantes, prioriza o gargalo e entrega um plano de decisão.</p>
       </div>
     </div>
   </div>
@@ -536,7 +602,7 @@
   <div class="footer-grid">
     <div>
       <div class="footer-logo">Grupo Portel</div>
-      <p style="color:var(--muted); font-size:14px; max-width:300px; font-weight:600">Assessoria de Vendas focada em construir escala, previsibilidade e lucro para empresas que não aceitam estagnar.</p>
+      <p style="color:var(--muted); font-size:14px; max-width:340px; font-weight:600">Engenharia de vendas para conectar aquisição, CRM, pré-venda e fechamento em uma operação comercial previsível.</p>
     </div>
     <div style="display:flex; flex-direction:column; gap:16px">
       <h4 style="color:var(--text); font-weight:800; font-size:16px">Contato</h4>
@@ -546,14 +612,14 @@
       </p>
       
       <p style="font-size:14px; font-weight:600">
-        <a href="https://wa.me/5521997857460" target="_blank" class="contact-link">WhatsApp: (21) 99785-7460</a>
+        <a href="https://wa.me/5521997857460" target="_blank" rel="noopener noreferrer" class="contact-link">WhatsApp: (21) 99785-7460</a>
       </p>
     </div>
   </div>
   
   <div class="footer-bottom">
     <div class="footer-copy">
-      © 2026 Grupo Portel. CNPJ: xx.xxx.xxx/xxxx-xx. Todos os direitos reservados.
+      © 2026 Grupo Portel. Todos os direitos reservados.
     </div>
     <div class="footer-links">
       <a href="privacidade.html">Política de Privacidade</a>
@@ -561,7 +627,7 @@
     </div>
   </div>
   <p style="font-size:10px; color:var(--muted); text-align:center; margin-top:24px;">
-    Desenvolvido por <a href="https://grupoportel.pages.dev" target="_blank" style="color: var(--gold); text-decoration: underline;">Grupo Portel</a>
+    Desenvolvido por <a href="https://grupoportel.pages.dev" target="_blank" rel="noopener noreferrer" style="color: var(--gold); text-decoration: underline;">Grupo Portel</a>
   </p>
 </footer>
 
@@ -615,6 +681,7 @@
     const empresa = this.querySelector('[name="Empresa"]').value;
     const setor = this.querySelector('[name="Setor"]').value;
     const faturamento = this.querySelector('[name="Faturamento"]').value;
+    const gargalo = this.querySelector('[name="Gargalo"]').value;
 
     // Formatação para o CRM
     const leadId = Date.now();
@@ -630,7 +697,7 @@
       nicho: setor,
       origem: "site",
       status: "nenhuma",
-      obs: `Faturamento Estimado: ${faturamento}`,
+      obs: `Faturamento estimado: ${faturamento} | Gargalo percebido: ${gargalo}`,
       data_entrada: dataCurta,
       createdAt: dataAtual,
       updatedAt: dataAtual
@@ -653,13 +720,14 @@
       const templateParams = {
         to_name: nome,           
         to_email: email,         
-        empresa: empresa         
+        empresa: empresa,
+        gargalo: gargalo
       };
 
       await emailjs.send("service_34pa4so", "template_xzrnokg", templateParams);
 
       // 3. Conclusão
-      alert("Diagnóstico solicitado com sucesso! Você receberá um e-mail de confirmação e nossa diretoria entrará em contato em até 10h.");
+      alert("Avaliação solicitada com sucesso! Você receberá um e-mail de confirmação e entraremos em contato em até 10 horas úteis.");
       this.reset(); // Limpa o formulário
 
     } catch (error) {

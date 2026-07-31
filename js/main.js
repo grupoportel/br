@@ -219,30 +219,30 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Dados de cada etapa do funil para explicar a operação
   const funnelData = {
-    'descoberta': {
-      title: 'Fase 1: Descoberta',
-      oque: 'O público-alvo ainda não conhece sua empresa. Eles estão navegando nas redes ou pesquisando soluções iniciais de forma passiva.',
-      como: 'Criamos campanhas de anúncios (Ads) ultra segmentadas para colocar a sua marca de frente com quem realmente tem poder de compra, gerando volume e atenção.'
+    'aquisicao': {
+      title: 'Fase 1: Aquisição',
+      oque: 'A empresa disputa atenção em canais pagos, orgânicos e de prospecção. Sem uma promessa clara, volume não se transforma em oportunidade.',
+      como: 'Alinhamos público, oferta, mensagem e canal para atrair pessoas com aderência ao problema que a empresa resolve.'
     },
-    'interesse': {
-      title: 'Fase 2: Interesse',
-      oque: 'O consumidor percebe que tem um problema ou desejo e entende que a sua empresa atua nessa área.',
-      como: 'Implementamos iscas digitais, conteúdos estratégicos e páginas de alta conversão (Landing Pages) para capturar o contato desse visitante e transformá-lo em um Lead.'
+    'aquecimento': {
+      title: 'Fase 2: Aquecimento',
+      oque: 'O lead demonstrou interesse, mas ainda precisa entender a urgência do problema, o valor da solução e por que deve continuar a jornada.',
+      como: 'Criamos páginas, conteúdos e sequências que educam, filtram objeções e preparam a próxima decisão comercial.'
     },
-    'desejo': {
-      title: 'Fase 3: Desejo',
-      oque: 'O lead está comparando opções. Ele precisa entender por que a sua solução é a melhor escolha técnica e financeira do mercado.',
-      como: 'Atuamos com fluxos de automação de e-mail e estruturamos o setor de Pré-vendas (SDR) para qualificar o lead, quebrando objeções antes mesmo da reunião.'
+    'pre-venda': {
+      title: 'Fase 3: Pré-venda',
+      oque: 'Nem todo contato deve virar reunião. A falta de critérios consome a agenda do time e reduz a qualidade das conversas.',
+      como: 'Estruturamos perguntas, critérios de qualificação, cadências e CRM para transformar interesse em oportunidade com contexto.'
     },
-    'venda': {
-      title: 'Fase 4: Venda',
-      oque: 'O momento da decisão. O prospect está na mesa de negociação com o seu time comercial.',
-      como: 'Desenhamos scripts de vendas, estruturamos o seu CRM e treinamos a sua equipe comercial com técnicas de fechamento para aumentar a taxa de conversão (Win-rate).'
+    'reuniao': {
+      title: 'Fase 4: Reunião',
+      oque: 'O prospect chega à conversa para avaliar aderência e segurança, não para ouvir um pitch genérico.',
+      como: 'Desenhamos roteiros consultivos, processo de proposta e treinamento para o vendedor diagnosticar, demonstrar valor e conduzir a decisão.'
     },
-    'pos-venda': {
-      title: 'Fase 5: Pós-Venda (Fidelização)',
-      oque: 'O contrato foi fechado. O cliente espera receber o que foi prometido e ter um bom suporte.',
-      como: 'Estruturamos processos de retenção (Customer Success) e campanhas de Remarketing para gerar Up-sell (vender mais para o mesmo cliente) e aumentar o LTV.'
+    'receita': {
+      title: 'Fase 5: Receita',
+      oque: 'A venda concluída gera dados sobre origem, ciclo, conversão, retenção e valor do cliente.',
+      como: 'Organizamos indicadores e rotinas de análise para localizar perdas, priorizar melhorias e escalar o que funciona.'
     }
   };
 
@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Carrega a primeira fase por padrão ao abrir o site
-  updateFunnelContent('descoberta');
+  updateFunnelContent('aquisicao');
 
 }); // <-- Fechamento do DOMContentLoaded
 
