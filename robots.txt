@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grupoportel.pages.dev/sitemap.xml
+Sitemap: https://grupoportel.com/sitemap.xml
