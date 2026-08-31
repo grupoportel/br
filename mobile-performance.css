@@ -1,0 +1,15 @@
+/* Mobile performance layer for the published static build. */
+.snowfall span,.rainfall span,.falling-leaves span{animation-play-state:paused}
+.journey-sticky[data-season="winter"] .snowfall span,.journey-sticky[data-season="summer"] .rainfall span,.journey-sticky[data-season="autumn"] .falling-leaves span{animation-play-state:running}
+@media (max-width:900px){
+html{scroll-behavior:auto}
+.journey-sticky{--season-transition:.55s;contain:layout paint;height:100svh;min-height:100svh}
+.scene{transform:translateZ(0)}
+.story-chapter{filter:none;will-change:transform,opacity}
+.story-kicker,.nav-cta{-webkit-backdrop-filter:none;backdrop-filter:none}
+.rough-capybara{transition-duration:.08s}
+.snowfall,.rainfall,.falling-leaves{display:none}
+.journey-sticky[data-season="winter"] .snowfall,.journey-sticky[data-season="summer"] .rainfall,.journey-sticky[data-season="autumn"] .falling-leaves{display:block}
+.snowfall span:nth-child(n+17),.rainfall span:nth-child(n+22),.falling-leaves span:nth-child(n+9),.distant-forest span:nth-child(n+12),.foreground-meadow span:nth-child(n+17){display:none}
+.method-section,.services-section,.process-section,.contact-section,footer{content-visibility:auto;contain-intrinsic-size:auto 900px}
+}

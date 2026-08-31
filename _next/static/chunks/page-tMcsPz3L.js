@@ -1,1 +1,975 @@
-import{r as e}from"./rolldown-runtime-C60lm6uB.js";import{i as t,r as n}from"./framework-BgSIrAUN.js";var r=e(n(),1),i=t(),a=[{season:`winter`,number:`01`,phase:`Exploração`,eyebrow:`Antes de investir mais`,title:`Sua empresa talvez não precise de mais leads.`,body:`Talvez precise parar de perder as oportunidades que já chegam até ela.`},{season:`spring`,number:`02`,phase:`Lapidação`,eyebrow:`O vazamento é invisível`,title:`A venda raramente se perde em um único lugar.`,body:`Ela desaparece entre mensagem, atendimento, proposta e acompanhamento.`},{season:`summer`,number:`03`,phase:`Escala`,eyebrow:`Diagnóstico antes do pacote`,title:`Por isso não começamos vendendo uma solução pronta.`,body:`Primeiro encontramos a ruptura. Depois prescrevemos a prioridade.`},{season:`autumn`,number:`04`,phase:`Extração`,eyebrow:`Uma jornada conectada`,title:`Conectamos marca, marketing e vendas.`,body:`Para transformar atenção em decisão, venda e recorrência.`}],o=[[`Atenção sem intenção`,`A empresa aparece, mas a mensagem não cria desejo nem deixa claro por que escolher sua marca.`],[`Interesse sem conversa`,`O cliente demonstra interesse, mas encontra atrito, demora ou falta de direção para avançar.`],[`Conversa sem decisão`,`A reunião acontece, mas diagnóstico, proposta e acompanhamento não conduzem a uma escolha segura.`],[`Venda sem continuidade`,`A entrega termina sem recompra, indicação ou uma próxima oportunidade planejada.`]];function s(){let e=(0,r.useRef)(null),t=(0,r.useRef)(0),n=(0,r.useRef)(0),[s,c]=(0,r.useState)(0),[l,u]=(0,r.useState)(0),[d,f]=(0,r.useState)(!1),[p,m]=(0,r.useState)(!1),[h,g]=(0,r.useState)(`forward`),[_,v]=(0,r.useState)(`idle`);(0,r.useEffect)(()=>{let r=0,i=0,o=!1,s=e=>{let n=Number.isFinite(e)?Math.min(Math.max(e,0),1):0,r=Math.min(Math.max(Math.floor(n*a.length),0),a.length-1);t.current=n,u(n),c(r)},l=()=>{o=!1;let n=e.current;if(!n)return;let a=n.getBoundingClientRect(),c=Math.max(n.offsetHeight-window.innerHeight,1),l=Math.min(Math.max(-a.top/c,0),1),u=l-t.current;Math.abs(u)>1e-4&&(g(u>0?`forward`:`backward`),f(!0),m(!0),window.clearTimeout(r),window.clearTimeout(i),r=window.setTimeout(()=>f(!1),140),i=window.setTimeout(()=>m(!1),2e3)),s(l)},d=()=>{o||(o=!0,n.current=requestAnimationFrame(l))};return l(),window.addEventListener(`scroll`,d,{passive:!0}),window.addEventListener(`resize`,d),()=>{cancelAnimationFrame(n.current),window.clearTimeout(r),window.clearTimeout(i),window.removeEventListener(`scroll`,d),window.removeEventListener(`resize`,d)}},[]);let y=a[Number.isInteger(s)?Math.min(Math.max(s,0),a.length-1):0]??a[0],b=e=>{let t=l*a.length-e;e===0&&l<.02&&(t=.08);let n=0,r=-38,i=9,o=.965;if(t>=-.18&&t<.08){let e=(t+.18)/.26;n=e,r=-38*(1-e),i=9*(1-e),o=.965+e*.035}else if(t>=.08&&t<=.72)n=1,r=0,i=0,o=1;else if(t>.72&&t<=.98){let e=(t-.72)/.26;n=1-e,r=38*e,i=9*e,o=1-e*.025}else t>.98&&(r=38);return{"--story-x":r,"--story-opacity":n,"--story-blur":`${i}px`,"--story-scale":o}};return(0,i.jsxs)(`main`,{children:[(0,i.jsx)(`a`,{className:`skip-link`,href:`#metodo`,children:`Pular animação`}),(0,i.jsxs)(`header`,{className:`site-header`,children:[(0,i.jsxs)(`a`,{className:`brand`,href:`#inicio`,"aria-label":`Grupo Portel — início`,children:[(0,i.jsx)(`span`,{className:`brand-mark`,children:(0,i.jsx)(`img`,{src:`/assets/logo-grupo-portel.png`,alt:``})}),(0,i.jsx)(`span`,{children:`GRUPO PORTEL`})]}),(0,i.jsxs)(`nav`,{"aria-label":`Navegação principal`,children:[(0,i.jsx)(`a`,{href:`#metodo`,children:`Como funciona`}),(0,i.jsx)(`a`,{href:`#atuacao`,children:`O que estruturamos`}),(0,i.jsx)(`a`,{className:`nav-cta`,href:`#contato`,children:`Solicitar avaliação`})]})]}),(0,i.jsx)(`section`,{className:`journey`,id:`inicio`,ref:e,"aria-label":`As quatro fases do método Grupo Portel`,children:(0,i.jsxs)(`div`,{className:`journey-sticky ${d?`is-timeline-active`:``}`,"data-season":y.season,style:{"--journey-progress":l},children:[(0,i.jsxs)(`div`,{className:`scene`,"aria-hidden":`true`,children:[(0,i.jsx)(`div`,{className:`sky-glow`}),(0,i.jsx)(`div`,{className:`sun`}),(0,i.jsx)(`div`,{className:`cloud cloud-one`}),(0,i.jsx)(`div`,{className:`cloud cloud-two`}),(0,i.jsx)(`div`,{className:`mountain mountain-one`}),(0,i.jsx)(`div`,{className:`mountain mountain-two`}),(0,i.jsx)(`div`,{className:`far-hill far-hill-one`}),(0,i.jsx)(`div`,{className:`far-hill far-hill-two`}),(0,i.jsx)(`div`,{className:`distant-forest`,children:Array.from({length:15},(e,t)=>(0,i.jsx)(`span`,{style:{"--pine-x":`${t*8.5}%`,"--pine-scale":.62+t%4*.11}},t))}),(0,i.jsx)(`div`,{className:`snowfall`,children:Array.from({length:32},(e,t)=>(0,i.jsx)(`span`,{style:{"--x":`${t*37%100}%`,"--size":`${3+t%5}px`,"--duration":`${6+t%7*.8}s`,"--delay":`${-(t%11)*.75}s`,"--flake-opacity":.4+t%5*.1}},t))}),(0,i.jsx)(`div`,{className:`rainfall`,children:Array.from({length:42},(e,t)=>(0,i.jsx)(`span`,{style:{"--rain-x":`${(t*31+7)%104}%`,"--rain-length":`${12+t%5*4}px`,"--rain-duration":`${.48+t%6*.055}s`,"--rain-delay":`${-(t%13)*.09}s`,"--rain-opacity":.24+t%5*.1}},t))}),(0,i.jsx)(`div`,{className:`grove`,children:Array.from({length:7},(e,t)=>(0,i.jsx)(`span`,{className:`tree tree-${t+1}`},t))}),(0,i.jsx)(`div`,{className:`flowers`,children:Array.from({length:11},(e,t)=>(0,i.jsx)(`span`,{style:{"--flower-x":`${(t*17+5)%96}%`,"--flower-y":`${7+t%4*2}%`}},t))}),(0,i.jsx)(`div`,{className:`falling-leaves`,children:Array.from({length:14},(e,t)=>(0,i.jsx)(`span`,{style:{"--leaf-x":`${(t*29+4)%96}%`,"--leaf-y":`${-5-t%5*8}%`,"--leaf-duration":`${7+t%6*.7}s`,"--leaf-delay":`${-(t%9)*.8}s`,"--leaf-color":`hsl(${24+t%3*13} 72% 48%)`}},t))}),(0,i.jsx)(`div`,{className:`ground-back`}),(0,i.jsx)(`div`,{className:`path`}),(0,i.jsx)(`div`,{className:`ground-front`}),(0,i.jsxs)(`div`,{className:`rough-capybara ${l>.012?`is-started`:``} ${p?`is-crouched`:``} ${d?`is-scrolling`:``} ${h===`backward`?`is-reversing`:``}`,title:`Capivara atravessando as quatro estações`,children:[(0,i.jsx)(`span`,{className:`rough-capy-sprite rough-transition`}),(0,i.jsx)(`span`,{className:`rough-capy-sprite rough-walk`})]}),(0,i.jsx)(`div`,{className:`foreground-grove`,children:Array.from({length:6},(e,t)=>(0,i.jsx)(`span`,{className:`foreground-tree foreground-tree-${t+1}`},t))}),(0,i.jsx)(`div`,{className:`foreground-meadow`,children:Array.from({length:24},(e,t)=>(0,i.jsx)(`span`,{style:{"--grass-x":`${t*9.2}%`,"--grass-scale":.72+t%5*.13}},t))})]}),(0,i.jsx)(`div`,{className:`journey-story`,"aria-hidden":`true`,children:a.map((e,t)=>(0,i.jsx)(`article`,{className:`story-chapter`,style:b(t),children:(0,i.jsxs)(`div`,{className:`story-copy`,children:[(0,i.jsx)(`p`,{className:`story-kicker`,children:e.eyebrow}),t===0?(0,i.jsx)(`h1`,{className:`story-title`,children:e.title}):(0,i.jsx)(`h2`,{className:`story-title`,children:e.title}),(0,i.jsx)(`p`,{className:`story-body`,children:e.body})]})},e.title))}),(0,i.jsxs)(`p`,{className:`sr-only`,"aria-live":`polite`,children:[y.title,` `,y.body]}),(0,i.jsxs)(`div`,{className:`chapter-meta`,children:[(0,i.jsx)(`span`,{children:y.number}),(0,i.jsxs)(`div`,{children:[(0,i.jsx)(`small`,{children:`FASE DO MÉTODO`}),(0,i.jsx)(`strong`,{children:y.phase})]})]}),(0,i.jsx)(`div`,{className:`season-rail`,"aria-hidden":`true`,children:a.map((e,t)=>(0,i.jsxs)(`span`,{className:t===s?`active`:``,children:[(0,i.jsx)(`i`,{}),` `,e.phase]},e.phase))}),(0,i.jsxs)(`div`,{className:`scroll-prompt ${l>=1?`is-complete`:``}`,"aria-live":`polite`,children:[(0,i.jsx)(`span`,{children:d?h===`backward`?`Subindo · a jornada retrocede com você`:`Descendo · a jornada avança com você`:l>=1?`Jornada concluída · continue rolando`:l>0?`Role para avançar · suba para retroceder`:`Conduza a jornada com o scroll · cerca de 20 segundos`}),(0,i.jsx)(`div`,{className:`timeline-track`,"aria-hidden":`true`,children:(0,i.jsx)(`i`,{style:{transform:`scaleX(${l})`}})})]})]})}),(0,i.jsxs)(`section`,{className:`method-section`,id:`metodo`,children:[(0,i.jsxs)(`div`,{className:`section-heading`,children:[(0,i.jsx)(`p`,{className:`section-kicker`,children:`ENGENHARIA DE VENDAS`}),(0,i.jsx)(`h2`,{children:`Crescimento não é uma coleção de ferramentas.`})]}),(0,i.jsxs)(`div`,{className:`method-copy`,children:[(0,i.jsx)(`p`,{className:`large-copy`,children:`É uma jornada em que cada etapa prepara a próxima — sem deixar oportunidades desaparecerem pelo caminho.`}),(0,i.jsx)(`p`,{children:`Unimos psicologia de decisão, posicionamento de marca, marketing e estrutura comercial para encontrar onde a receita escapa e transformar esse ponto na próxima prioridade do negócio.`}),(0,i.jsxs)(`div`,{className:`numbers`,children:[(0,i.jsxs)(`div`,{children:[(0,i.jsx)(`strong`,{children:`4`}),(0,i.jsx)(`span`,{children:`fases do método`})]}),(0,i.jsxs)(`div`,{children:[(0,i.jsx)(`strong`,{children:`14`}),(0,i.jsx)(`span`,{children:`áreas que podem ser investigadas`})]}),(0,i.jsxs)(`div`,{children:[(0,i.jsx)(`strong`,{children:`1`}),(0,i.jsx)(`span`,{children:`prioridade tratada por vez`})]})]})]})]}),(0,i.jsxs)(`section`,{className:`services-section`,id:`atuacao`,children:[(0,i.jsxs)(`div`,{className:`section-heading compact`,children:[(0,i.jsx)(`p`,{className:`section-kicker`,children:`TODA VENDA PERDIDA DEIXA UMA PISTA`}),(0,i.jsx)(`h2`,{children:`Em qual passagem a sua oportunidade desaparece?`})]}),(0,i.jsx)(`div`,{className:`leak-grid`,children:o.map(([e,t],n)=>(0,i.jsxs)(`article`,{className:`leak-card`,children:[(0,i.jsxs)(`span`,{children:[`0`,n+1]}),(0,i.jsx)(`h3`,{children:e}),(0,i.jsx)(`p`,{children:t})]},e))})]}),(0,i.jsxs)(`section`,{className:`process-section`,children:[(0,i.jsxs)(`div`,{className:`section-heading process-heading`,children:[(0,i.jsx)(`p`,{className:`section-kicker`,children:`NÃO VENDEMOS TAREFAS. CORRIGIMOS RUPTURAS.`}),(0,i.jsx)(`h2`,{children:`O serviço certo só aparece depois da pergunta certa.`}),(0,i.jsx)(`p`,{children:`Site, CRM, conteúdo, automação ou treinamento são ferramentas. A escolha começa pelo que está impedindo a próxima venda.`})]}),(0,i.jsxs)(`div`,{className:`process-steps`,children:[(0,i.jsxs)(`article`,{children:[(0,i.jsx)(`span`,{children:`01`}),(0,i.jsx)(`h3`,{children:`Investigamos`}),(0,i.jsx)(`p`,{children:`Observamos o negócio por inteiro e localizamos a ruptura com maior impacto comercial.`})]}),(0,i.jsxs)(`article`,{children:[(0,i.jsx)(`span`,{children:`02`}),(0,i.jsx)(`h3`,{children:`Prescrevemos`}),(0,i.jsx)(`p`,{children:`Transformamos o diagnóstico em uma prioridade clara, com direção, escopo e critério de sucesso.`})]}),(0,i.jsxs)(`article`,{children:[(0,i.jsx)(`span`,{children:`03`}),(0,i.jsx)(`h3`,{children:`Implementamos`}),(0,i.jsx)(`p`,{children:`Construímos os ativos e processos necessários e acompanhamos a mudança até ela funcionar na operação.`})]})]}),(0,i.jsx)(`p`,{className:`process-conclusion`,children:`Você não recebe um pacote genérico. Recebe a intervenção coerente com o estágio da sua empresa.`})]}),(0,i.jsxs)(`section`,{className:`contact-section`,id:`contato`,children:[(0,i.jsxs)(`div`,{className:`contact-copy`,children:[(0,i.jsx)(`p`,{className:`section-kicker`,children:`O PRÓXIMO PASSO NÃO PRECISA SER UM PALPITE`}),(0,i.jsx)(`h2`,{children:`Descubra onde a sua venda está travando.`}),(0,i.jsx)(`p`,{children:`Na avaliação inicial, entendemos o momento da empresa e indicamos o caminho mais coerente. Em até 10 horas úteis, você recebe uma direção clara para avançar.`}),(0,i.jsxs)(`ul`,{className:`contact-fit-list`,children:[(0,i.jsx)(`li`,{children:`Você já possui uma oferta e clientes.`}),(0,i.jsx)(`li`,{children:`Existe um problema comercial relevante.`}),(0,i.jsx)(`li`,{children:`O decisor pode participar da mudança.`})]})]}),(0,i.jsxs)(`form`,{className:`diagnosis-form`,"aria-label":`Solicitação de avaliação comercial inicial`,action:`https://formspree.io/f/xkgbwglk`,method:`POST`,onSubmit:async e=>{e.preventDefault();let t=e.currentTarget,n=new FormData(t),r=String(n.get(`Nome`)??``),i=String(n.get(`Email`)??``),a=String(n.get(`Telefone`)??``),o=String(n.get(`Empresa`)??``),s=String(n.get(`Setor`)??``),c=String(n.get(`Faturamento`)??``),l=String(n.get(`Gargalo`)??``),u=Date.now(),d=new Date().toISOString(),f=new FormData;f.append(`Nome`,r),f.append(`email`,i),f.append(`WhatsApp`,a),f.append(`Empresa`,o),f.append(`Setor`,s),f.append(`Faturamento`,c),f.append(`Gargalo`,l),f.append(`_subject`,`Nova solicitação de diagnóstico — ${o}`),v(`submitting`);try{let e=fetch(`https://formspree.io/f/xkgbwglk`,{method:`POST`,headers:{Accept:`application/json`},body:f}).then(async e=>{if(!e.ok)throw Error(`Formspree respondeu com status ${e.status}.`);return e}),n=fetch(`https://crm---grupo-portel-default-rtdb.firebaseio.com/crm_data/leads/${u}.json`,{method:`PUT`,headers:{"Content-Type":`application/json`},body:JSON.stringify({id:u,nome:`${r} (${o})`,email:i,telefone:a,whatsapp:a,nicho:s,origem:`site`,status:`nenhuma`,obs:`Faturamento estimado: ${c} | Gargalo percebido: ${l}`,data_entrada:d.slice(0,10),createdAt:d,updatedAt:d})}),p=fetch(`https://api.emailjs.com/api/v1.0/email/send`,{method:`POST`,headers:{"Content-Type":`application/json`},body:JSON.stringify({service_id:`service_34pa4so`,template_id:`template_xzrnokg`,user_id:`2ywUNfa0aE9SElHK1`,template_params:{to_name:r,to_email:i,empresa:o}})}),[m]=await Promise.allSettled([e,n,p]);if(m.status===`rejected`)throw m.reason;t.reset(),v(`success`)}catch{v(`error`)}},children:[(0,i.jsxs)(`div`,{className:`form-intro`,children:[(0,i.jsx)(`strong`,{children:`Conte-nos sobre a sua operação`}),(0,i.jsx)(`span`,{children:`Leva cerca de 2 minutos.`})]}),(0,i.jsxs)(`div`,{className:`form-row`,children:[(0,i.jsxs)(`label`,{children:[(0,i.jsx)(`span`,{children:`Nome completo`}),(0,i.jsx)(`input`,{type:`text`,name:`Nome`,required:!0,autoComplete:`name`,placeholder:`Seu nome`})]}),(0,i.jsxs)(`label`,{children:[(0,i.jsx)(`span`,{children:`E-mail corporativo`}),(0,i.jsx)(`input`,{type:`email`,name:`Email`,required:!0,autoComplete:`email`,placeholder:`seu@email.com`})]})]}),(0,i.jsxs)(`div`,{className:`form-row`,children:[(0,i.jsxs)(`label`,{children:[(0,i.jsx)(`span`,{children:`WhatsApp`}),(0,i.jsx)(`input`,{type:`tel`,name:`Telefone`,required:!0,autoComplete:`tel`,placeholder:`(00) 00000-0000`})]}),(0,i.jsxs)(`label`,{children:[(0,i.jsx)(`span`,{children:`Nome da empresa`}),(0,i.jsx)(`input`,{type:`text`,name:`Empresa`,required:!0,autoComplete:`organization`,placeholder:`Sua empresa`})]})]}),(0,i.jsxs)(`div`,{className:`form-row`,children:[(0,i.jsxs)(`label`,{children:[(0,i.jsx)(`span`,{children:`Setor de atuação`}),(0,i.jsxs)(`select`,{name:`Setor`,required:!0,defaultValue:``,children:[(0,i.jsx)(`option`,{value:``,disabled:!0,children:`Selecione o setor`}),(0,i.jsx)(`option`,{value:`Serviços B2B`,children:`Serviços B2B`}),(0,i.jsx)(`option`,{value:`Indústria`,children:`Indústria / Manufatura`}),(0,i.jsx)(`option`,{value:`Tecnologia`,children:`Tecnologia / SaaS`}),(0,i.jsx)(`option`,{value:`Varejo`,children:`Varejo de Alta Renda`}),(0,i.jsx)(`option`,{value:`Agronegócio`,children:`Agronegócio`}),(0,i.jsx)(`option`,{value:`Outros`,children:`Outros`})]})]}),(0,i.jsxs)(`label`,{children:[(0,i.jsx)(`span`,{children:`Faturamento mensal estimado`}),(0,i.jsxs)(`select`,{name:`Faturamento`,required:!0,defaultValue:``,children:[(0,i.jsx)(`option`,{value:``,disabled:!0,children:`Selecione a faixa`}),(0,i.jsx)(`option`,{value:`Até R$ 50k`,children:`Até R$ 50 mil`}),(0,i.jsx)(`option`,{value:`R$ 51k a R$ 200k`,children:`R$ 51 mil a R$ 200 mil`}),(0,i.jsx)(`option`,{value:`R$ 201k a R$ 500k`,children:`R$ 201 mil a R$ 500 mil`}),(0,i.jsx)(`option`,{value:`Acima de R$ 500k`,children:`Acima de R$ 500 mil`})]})]})]}),(0,i.jsxs)(`label`,{children:[(0,i.jsx)(`span`,{children:`Principal gargalo percebido hoje`}),(0,i.jsxs)(`select`,{name:`Gargalo`,required:!0,defaultValue:``,children:[(0,i.jsx)(`option`,{value:``,disabled:!0,children:`Selecione o principal desafio`}),(0,i.jsx)(`option`,{value:`Posicionamento ou oferta`,children:`Posicionamento ou oferta pouco clara`}),(0,i.jsx)(`option`,{value:`Aquisição`,children:`Poucas oportunidades ou dependência de indicação`}),(0,i.jsx)(`option`,{value:`Funil ou CRM`,children:`Leads se perdem no funil ou no CRM`}),(0,i.jsx)(`option`,{value:`Conversão comercial`,children:`Baixa conversão em reuniões e propostas`}),(0,i.jsx)(`option`,{value:`Retenção ou recompra`,children:`Pouca retenção, recompra ou indicação`}),(0,i.jsx)(`option`,{value:`Sem clareza`,children:`Ainda não sei onde está o gargalo`})]})]}),(0,i.jsx)(`button`,{className:`form-submit`,type:`submit`,disabled:_===`submitting`,children:_===`submitting`?`Enviando solicitação...`:`Quero meu diagnóstico inicial`}),_===`success`&&(0,i.jsx)(`p`,{className:`form-feedback is-success`,role:`status`,children:`Solicitação recebida. Nossa equipe entrará em contato pelos dados informados.`}),_===`error`&&(0,i.jsx)(`p`,{className:`form-feedback is-error`,role:`alert`,children:`Não foi possível enviar agora. Tente novamente ou fale conosco pelo WhatsApp.`}),(0,i.jsxs)(`p`,{className:`form-privacy`,children:[`Seus dados serão usados somente para analisar a solicitação e realizar este contato. Consulte a `,(0,i.jsx)(`a`,{href:`/privacidade/`,children:`Política de Privacidade`}),`.`]}),(0,i.jsx)(`a`,{className:`form-whatsapp`,href:`https://wa.me/5521997857460`,target:`_blank`,rel:`noreferrer`,children:`Prefere conversar? Chame pelo WhatsApp.`})]})]}),(0,i.jsxs)(`footer`,{children:[(0,i.jsxs)(`div`,{className:`brand`,children:[(0,i.jsx)(`span`,{className:`brand-mark`,children:(0,i.jsx)(`img`,{src:`/assets/logo-grupo-portel.png`,alt:``})}),(0,i.jsx)(`span`,{children:`GRUPO PORTEL`})]}),(0,i.jsx)(`p`,{children:`Engenharia de vendas para marcas em crescimento.`}),(0,i.jsxs)(`div`,{className:`footer-meta`,children:[(0,i.jsxs)(`nav`,{"aria-label":`Documentos legais`,children:[(0,i.jsx)(`a`,{href:`/privacidade/`,children:`Política de Privacidade`}),(0,i.jsx)(`a`,{href:`/termos/`,children:`Termos de Uso`})]}),(0,i.jsx)(`p`,{children:`© 2026 Grupo Portel. Todos os direitos reservados.`})]})]})]})}export{s as default};
+import { r as e } from "./rolldown-runtime-C60lm6uB.js";
+import { i as t, r as n } from "./framework-BgSIrAUN.js";
+var r = e(n(), 1),
+  i = t(),
+  a = [
+    {
+      season: `winter`,
+      number: `01`,
+      phase: `Exploração`,
+      eyebrow: `Antes de investir mais`,
+      title: `Sua empresa talvez não precise de mais leads.`,
+      body: `Talvez precise parar de perder as oportunidades que já chegam até ela.`,
+    },
+    {
+      season: `spring`,
+      number: `02`,
+      phase: `Lapidação`,
+      eyebrow: `O vazamento é invisível`,
+      title: `A venda raramente se perde em um único lugar.`,
+      body: `Ela desaparece entre mensagem, atendimento, proposta e acompanhamento.`,
+    },
+    {
+      season: `summer`,
+      number: `03`,
+      phase: `Escala`,
+      eyebrow: `Diagnóstico antes do pacote`,
+      title: `Por isso não começamos vendendo uma solução pronta.`,
+      body: `Primeiro encontramos a ruptura. Depois prescrevemos a prioridade.`,
+    },
+    {
+      season: `autumn`,
+      number: `04`,
+      phase: `Extração`,
+      eyebrow: `Uma jornada conectada`,
+      title: `Conectamos marca, marketing e vendas.`,
+      body: `Para transformar atenção em decisão, venda e recorrência.`,
+    },
+  ],
+  o = [
+    [
+      `Atenção sem intenção`,
+      `A empresa aparece, mas a mensagem não cria desejo nem deixa claro por que escolher sua marca.`,
+    ],
+    [
+      `Interesse sem conversa`,
+      `O cliente demonstra interesse, mas encontra atrito, demora ou falta de direção para avançar.`,
+    ],
+    [
+      `Conversa sem decisão`,
+      `A reunião acontece, mas diagnóstico, proposta e acompanhamento não conduzem a uma escolha segura.`,
+    ],
+    [
+      `Venda sem continuidade`,
+      `A entrega termina sem recompra, indicação ou uma próxima oportunidade planejada.`,
+    ],
+  ];
+function s() {
+  let e = (0, r.useRef)(null),
+    t = (0, r.useRef)(0),
+    n = (0, r.useRef)(0),
+    [s, c] = (0, r.useState)(0),
+    [l, u] = (0, r.useState)(0),
+    [d, f] = (0, r.useState)(!1),
+    [p, m] = (0, r.useState)(!1),
+    [h, g] = (0, r.useState)(`forward`),
+    [_, v] = (0, r.useState)(`idle`);
+  (0, r.useEffect)(() => {
+    let r = 0,
+      i = 0,
+      o = !1,
+      q = 0,
+      s = (e) => {
+        let n = Number.isFinite(e) ? Math.min(Math.max(e, 0), 1) : 0,
+          r = Math.min(Math.max(Math.floor(n * a.length), 0), a.length - 1);
+        ((t.current = n), u(n), c(r));
+      },
+      l = (w) => {
+        o = !1;
+        let n = e.current;
+        if (!n) return;
+        let a = n.getBoundingClientRect(),
+          c = Math.max(n.offsetHeight - window.innerHeight, 1),
+          l = Math.min(Math.max(-a.top / c, 0), 1),
+          u = l - t.current;
+        (n
+          .querySelector(`.journey-sticky`)
+          ?.style.setProperty(`--journey-progress`, String(l)),
+          n
+            .querySelector(`.timeline-track i`)
+            ?.style.setProperty(`transform`, `scaleX(${l})`));
+        if (Number.isFinite(w) && w - q < 32 && l > 0 && l < 1) return;
+        q = Number.isFinite(w) ? w : performance.now();
+        (Math.abs(u) > 1e-4 &&
+          (g(u > 0 ? `forward` : `backward`),
+          f(!0),
+          m(!0),
+          window.clearTimeout(r),
+          window.clearTimeout(i),
+          (r = window.setTimeout(() => f(!1), 140)),
+          (i = window.setTimeout(() => m(!1), 2e3))),
+          s(l));
+      },
+      d = () => {
+        o || ((o = !0), (n.current = requestAnimationFrame(l)));
+      };
+    return (
+      l(),
+      window.addEventListener(`scroll`, d, { passive: !0 }),
+      window.addEventListener(`resize`, d),
+      () => {
+        (cancelAnimationFrame(n.current),
+          window.clearTimeout(r),
+          window.clearTimeout(i),
+          window.removeEventListener(`scroll`, d),
+          window.removeEventListener(`resize`, d));
+      }
+    );
+  }, []);
+  let y =
+      a[Number.isInteger(s) ? Math.min(Math.max(s, 0), a.length - 1) : 0] ??
+      a[0],
+    b = (e) => {
+      let t = l * a.length - e;
+      e === 0 && l < 0.02 && (t = 0.08);
+      let n = 0,
+        r = -38,
+        i = 9,
+        o = 0.965;
+      if (t >= -0.18 && t < 0.08) {
+        let e = (t + 0.18) / 0.26;
+        ((n = e),
+          (r = -38 * (1 - e)),
+          (i = 9 * (1 - e)),
+          (o = 0.965 + e * 0.035));
+      } else if (t >= 0.08 && t <= 0.72) ((n = 1), (r = 0), (i = 0), (o = 1));
+      else if (t > 0.72 && t <= 0.98) {
+        let e = (t - 0.72) / 0.26;
+        ((n = 1 - e), (r = 38 * e), (i = 9 * e), (o = 1 - e * 0.025));
+      } else t > 0.98 && (r = 38);
+      return {
+        "--story-x": r,
+        "--story-opacity": n,
+        "--story-blur": `${i}px`,
+        "--story-scale": o,
+      };
+    };
+  return (0, i.jsxs)(`main`, {
+    children: [
+      (0, i.jsx)(`a`, {
+        className: `skip-link`,
+        href: `#metodo`,
+        children: `Pular animação`,
+      }),
+      (0, i.jsxs)(`header`, {
+        className: `site-header`,
+        children: [
+          (0, i.jsxs)(`a`, {
+            className: `brand`,
+            href: `#inicio`,
+            "aria-label": `Grupo Portel — início`,
+            children: [
+              (0, i.jsx)(`span`, {
+                className: `brand-mark`,
+                children: (0, i.jsx)(`img`, {
+                  src: `/assets/logo-grupo-portel.png`,
+                  alt: ``,
+                }),
+              }),
+              (0, i.jsx)(`span`, { children: `GRUPO PORTEL` }),
+            ],
+          }),
+          (0, i.jsxs)(`nav`, {
+            "aria-label": `Navegação principal`,
+            children: [
+              (0, i.jsx)(`a`, { href: `#metodo`, children: `Como funciona` }),
+              (0, i.jsx)(`a`, {
+                href: `#atuacao`,
+                children: `O que estruturamos`,
+              }),
+              (0, i.jsx)(`a`, {
+                className: `nav-cta`,
+                href: `#contato`,
+                children: `Solicitar avaliação`,
+              }),
+            ],
+          }),
+        ],
+      }),
+      (0, i.jsx)(`section`, {
+        className: `journey`,
+        id: `inicio`,
+        ref: e,
+        "aria-label": `As quatro fases do método Grupo Portel`,
+        children: (0, i.jsxs)(`div`, {
+          className: `journey-sticky ${d ? `is-timeline-active` : ``}`,
+          "data-season": y.season,
+          style: { "--journey-progress": l },
+          children: [
+            (0, i.jsxs)(`div`, {
+              className: `scene`,
+              "aria-hidden": `true`,
+              children: [
+                (0, i.jsx)(`div`, { className: `sky-glow` }),
+                (0, i.jsx)(`div`, { className: `sun` }),
+                (0, i.jsx)(`div`, { className: `cloud cloud-one` }),
+                (0, i.jsx)(`div`, { className: `cloud cloud-two` }),
+                (0, i.jsx)(`div`, { className: `mountain mountain-one` }),
+                (0, i.jsx)(`div`, { className: `mountain mountain-two` }),
+                (0, i.jsx)(`div`, { className: `far-hill far-hill-one` }),
+                (0, i.jsx)(`div`, { className: `far-hill far-hill-two` }),
+                (0, i.jsx)(`div`, {
+                  className: `distant-forest`,
+                  children: Array.from({ length: 15 }, (e, t) =>
+                    (0, i.jsx)(
+                      `span`,
+                      {
+                        style: {
+                          "--pine-x": `${t * 8.5}%`,
+                          "--pine-scale": 0.62 + (t % 4) * 0.11,
+                        },
+                      },
+                      t,
+                    ),
+                  ),
+                }),
+                (0, i.jsx)(`div`, {
+                  className: `snowfall`,
+                  children: Array.from({ length: 32 }, (e, t) =>
+                    (0, i.jsx)(
+                      `span`,
+                      {
+                        style: {
+                          "--x": `${(t * 37) % 100}%`,
+                          "--size": `${3 + (t % 5)}px`,
+                          "--duration": `${6 + (t % 7) * 0.8}s`,
+                          "--delay": `${-(t % 11) * 0.75}s`,
+                          "--flake-opacity": 0.4 + (t % 5) * 0.1,
+                        },
+                      },
+                      t,
+                    ),
+                  ),
+                }),
+                (0, i.jsx)(`div`, {
+                  className: `rainfall`,
+                  children: Array.from({ length: 42 }, (e, t) =>
+                    (0, i.jsx)(
+                      `span`,
+                      {
+                        style: {
+                          "--rain-x": `${(t * 31 + 7) % 104}%`,
+                          "--rain-length": `${12 + (t % 5) * 4}px`,
+                          "--rain-duration": `${0.48 + (t % 6) * 0.055}s`,
+                          "--rain-delay": `${-(t % 13) * 0.09}s`,
+                          "--rain-opacity": 0.24 + (t % 5) * 0.1,
+                        },
+                      },
+                      t,
+                    ),
+                  ),
+                }),
+                (0, i.jsx)(`div`, {
+                  className: `grove`,
+                  children: Array.from({ length: 7 }, (e, t) =>
+                    (0, i.jsx)(`span`, { className: `tree tree-${t + 1}` }, t),
+                  ),
+                }),
+                (0, i.jsx)(`div`, {
+                  className: `flowers`,
+                  children: Array.from({ length: 11 }, (e, t) =>
+                    (0, i.jsx)(
+                      `span`,
+                      {
+                        style: {
+                          "--flower-x": `${(t * 17 + 5) % 96}%`,
+                          "--flower-y": `${7 + (t % 4) * 2}%`,
+                        },
+                      },
+                      t,
+                    ),
+                  ),
+                }),
+                (0, i.jsx)(`div`, {
+                  className: `falling-leaves`,
+                  children: Array.from({ length: 14 }, (e, t) =>
+                    (0, i.jsx)(
+                      `span`,
+                      {
+                        style: {
+                          "--leaf-x": `${(t * 29 + 4) % 96}%`,
+                          "--leaf-y": `${-5 - (t % 5) * 8}%`,
+                          "--leaf-duration": `${7 + (t % 6) * 0.7}s`,
+                          "--leaf-delay": `${-(t % 9) * 0.8}s`,
+                          "--leaf-color": `hsl(${24 + (t % 3) * 13} 72% 48%)`,
+                        },
+                      },
+                      t,
+                    ),
+                  ),
+                }),
+                (0, i.jsx)(`div`, { className: `ground-back` }),
+                (0, i.jsx)(`div`, { className: `path` }),
+                (0, i.jsx)(`div`, { className: `ground-front` }),
+                (0, i.jsxs)(`div`, {
+                  className: `rough-capybara ${l > 0.012 ? `is-started` : ``} ${p ? `is-crouched` : ``} ${d ? `is-scrolling` : ``} ${h === `backward` ? `is-reversing` : ``}`,
+                  title: `Capivara atravessando as quatro estações`,
+                  children: [
+                    (0, i.jsx)(`span`, {
+                      className: `rough-capy-sprite rough-transition`,
+                    }),
+                    (0, i.jsx)(`span`, {
+                      className: `rough-capy-sprite rough-walk`,
+                    }),
+                  ],
+                }),
+                (0, i.jsx)(`div`, {
+                  className: `foreground-grove`,
+                  children: Array.from({ length: 6 }, (e, t) =>
+                    (0, i.jsx)(
+                      `span`,
+                      { className: `foreground-tree foreground-tree-${t + 1}` },
+                      t,
+                    ),
+                  ),
+                }),
+                (0, i.jsx)(`div`, {
+                  className: `foreground-meadow`,
+                  children: Array.from({ length: 24 }, (e, t) =>
+                    (0, i.jsx)(
+                      `span`,
+                      {
+                        style: {
+                          "--grass-x": `${t * 9.2}%`,
+                          "--grass-scale": 0.72 + (t % 5) * 0.13,
+                        },
+                      },
+                      t,
+                    ),
+                  ),
+                }),
+              ],
+            }),
+            (0, i.jsx)(`div`, {
+              className: `journey-story`,
+              "aria-hidden": `true`,
+              children: a.map((e, t) =>
+                (0, i.jsx)(
+                  `article`,
+                  {
+                    className: `story-chapter`,
+                    style: b(t),
+                    children: (0, i.jsxs)(`div`, {
+                      className: `story-copy`,
+                      children: [
+                        (0, i.jsx)(`p`, {
+                          className: `story-kicker`,
+                          children: e.eyebrow,
+                        }),
+                        t === 0
+                          ? (0, i.jsx)(`h1`, {
+                              className: `story-title`,
+                              children: e.title,
+                            })
+                          : (0, i.jsx)(`h2`, {
+                              className: `story-title`,
+                              children: e.title,
+                            }),
+                        (0, i.jsx)(`p`, {
+                          className: `story-body`,
+                          children: e.body,
+                        }),
+                      ],
+                    }),
+                  },
+                  e.title,
+                ),
+              ),
+            }),
+            (0, i.jsxs)(`p`, {
+              className: `sr-only`,
+              "aria-live": `polite`,
+              children: [y.title, ` `, y.body],
+            }),
+            (0, i.jsxs)(`div`, {
+              className: `chapter-meta`,
+              children: [
+                (0, i.jsx)(`span`, { children: y.number }),
+                (0, i.jsxs)(`div`, {
+                  children: [
+                    (0, i.jsx)(`small`, { children: `FASE DO MÉTODO` }),
+                    (0, i.jsx)(`strong`, { children: y.phase }),
+                  ],
+                }),
+              ],
+            }),
+            (0, i.jsx)(`div`, {
+              className: `season-rail`,
+              "aria-hidden": `true`,
+              children: a.map((e, t) =>
+                (0, i.jsxs)(
+                  `span`,
+                  {
+                    className: t === s ? `active` : ``,
+                    children: [(0, i.jsx)(`i`, {}), ` `, e.phase],
+                  },
+                  e.phase,
+                ),
+              ),
+            }),
+            (0, i.jsxs)(`div`, {
+              className: `scroll-prompt ${l >= 1 ? `is-complete` : ``}`,
+              "aria-live": `polite`,
+              children: [
+                (0, i.jsx)(`span`, {
+                  children: d
+                    ? h === `backward`
+                      ? `Subindo · a jornada retrocede com você`
+                      : `Descendo · a jornada avança com você`
+                    : l >= 1
+                      ? `Jornada concluída · continue rolando`
+                      : l > 0
+                        ? `Role para avançar · suba para retroceder`
+                        : `Conduza a jornada com o scroll · cerca de 20 segundos`,
+                }),
+                (0, i.jsx)(`div`, {
+                  className: `timeline-track`,
+                  "aria-hidden": `true`,
+                  children: (0, i.jsx)(`i`, {
+                    style: { transform: `scaleX(${l})` },
+                  }),
+                }),
+              ],
+            }),
+          ],
+        }),
+      }),
+      (0, i.jsxs)(`section`, {
+        className: `method-section`,
+        id: `metodo`,
+        children: [
+          (0, i.jsxs)(`div`, {
+            className: `section-heading`,
+            children: [
+              (0, i.jsx)(`p`, {
+                className: `section-kicker`,
+                children: `ENGENHARIA DE VENDAS`,
+              }),
+              (0, i.jsx)(`h2`, {
+                children: `Crescimento não é uma coleção de ferramentas.`,
+              }),
+            ],
+          }),
+          (0, i.jsxs)(`div`, {
+            className: `method-copy`,
+            children: [
+              (0, i.jsx)(`p`, {
+                className: `large-copy`,
+                children: `É uma jornada em que cada etapa prepara a próxima — sem deixar oportunidades desaparecerem pelo caminho.`,
+              }),
+              (0, i.jsx)(`p`, {
+                children: `Unimos psicologia de decisão, posicionamento de marca, marketing e estrutura comercial para encontrar onde a receita escapa e transformar esse ponto na próxima prioridade do negócio.`,
+              }),
+              (0, i.jsxs)(`div`, {
+                className: `numbers`,
+                children: [
+                  (0, i.jsxs)(`div`, {
+                    children: [
+                      (0, i.jsx)(`strong`, { children: `4` }),
+                      (0, i.jsx)(`span`, { children: `fases do método` }),
+                    ],
+                  }),
+                  (0, i.jsxs)(`div`, {
+                    children: [
+                      (0, i.jsx)(`strong`, { children: `14` }),
+                      (0, i.jsx)(`span`, {
+                        children: `áreas que podem ser investigadas`,
+                      }),
+                    ],
+                  }),
+                  (0, i.jsxs)(`div`, {
+                    children: [
+                      (0, i.jsx)(`strong`, { children: `1` }),
+                      (0, i.jsx)(`span`, {
+                        children: `prioridade tratada por vez`,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        ],
+      }),
+      (0, i.jsxs)(`section`, {
+        className: `services-section`,
+        id: `atuacao`,
+        children: [
+          (0, i.jsxs)(`div`, {
+            className: `section-heading compact`,
+            children: [
+              (0, i.jsx)(`p`, {
+                className: `section-kicker`,
+                children: `TODA VENDA PERDIDA DEIXA UMA PISTA`,
+              }),
+              (0, i.jsx)(`h2`, {
+                children: `Em qual passagem a sua oportunidade desaparece?`,
+              }),
+            ],
+          }),
+          (0, i.jsx)(`div`, {
+            className: `leak-grid`,
+            children: o.map(([e, t], n) =>
+              (0, i.jsxs)(
+                `article`,
+                {
+                  className: `leak-card`,
+                  children: [
+                    (0, i.jsxs)(`span`, { children: [`0`, n + 1] }),
+                    (0, i.jsx)(`h3`, { children: e }),
+                    (0, i.jsx)(`p`, { children: t }),
+                  ],
+                },
+                e,
+              ),
+            ),
+          }),
+        ],
+      }),
+      (0, i.jsxs)(`section`, {
+        className: `process-section`,
+        children: [
+          (0, i.jsxs)(`div`, {
+            className: `section-heading process-heading`,
+            children: [
+              (0, i.jsx)(`p`, {
+                className: `section-kicker`,
+                children: `NÃO VENDEMOS TAREFAS. CORRIGIMOS RUPTURAS.`,
+              }),
+              (0, i.jsx)(`h2`, {
+                children: `O serviço certo só aparece depois da pergunta certa.`,
+              }),
+              (0, i.jsx)(`p`, {
+                children: `Site, CRM, conteúdo, automação ou treinamento são ferramentas. A escolha começa pelo que está impedindo a próxima venda.`,
+              }),
+            ],
+          }),
+          (0, i.jsxs)(`div`, {
+            className: `process-steps`,
+            children: [
+              (0, i.jsxs)(`article`, {
+                children: [
+                  (0, i.jsx)(`span`, { children: `01` }),
+                  (0, i.jsx)(`h3`, { children: `Investigamos` }),
+                  (0, i.jsx)(`p`, {
+                    children: `Observamos o negócio por inteiro e localizamos a ruptura com maior impacto comercial.`,
+                  }),
+                ],
+              }),
+              (0, i.jsxs)(`article`, {
+                children: [
+                  (0, i.jsx)(`span`, { children: `02` }),
+                  (0, i.jsx)(`h3`, { children: `Prescrevemos` }),
+                  (0, i.jsx)(`p`, {
+                    children: `Transformamos o diagnóstico em uma prioridade clara, com direção, escopo e critério de sucesso.`,
+                  }),
+                ],
+              }),
+              (0, i.jsxs)(`article`, {
+                children: [
+                  (0, i.jsx)(`span`, { children: `03` }),
+                  (0, i.jsx)(`h3`, { children: `Implementamos` }),
+                  (0, i.jsx)(`p`, {
+                    children: `Construímos os ativos e processos necessários e acompanhamos a mudança até ela funcionar na operação.`,
+                  }),
+                ],
+              }),
+            ],
+          }),
+          (0, i.jsx)(`p`, {
+            className: `process-conclusion`,
+            children: `Você não recebe um pacote genérico. Recebe a intervenção coerente com o estágio da sua empresa.`,
+          }),
+        ],
+      }),
+      (0, i.jsxs)(`section`, {
+        className: `contact-section`,
+        id: `contato`,
+        children: [
+          (0, i.jsxs)(`div`, {
+            className: `contact-copy`,
+            children: [
+              (0, i.jsx)(`p`, {
+                className: `section-kicker`,
+                children: `O PRÓXIMO PASSO NÃO PRECISA SER UM PALPITE`,
+              }),
+              (0, i.jsx)(`h2`, {
+                children: `Descubra onde a sua venda está travando.`,
+              }),
+              (0, i.jsx)(`p`, {
+                children: `Na avaliação inicial, entendemos o momento da empresa e indicamos o caminho mais coerente. Em até 10 horas úteis, você recebe uma direção clara para avançar.`,
+              }),
+              (0, i.jsxs)(`ul`, {
+                className: `contact-fit-list`,
+                children: [
+                  (0, i.jsx)(`li`, {
+                    children: `Você já possui uma oferta e clientes.`,
+                  }),
+                  (0, i.jsx)(`li`, {
+                    children: `Existe um problema comercial relevante.`,
+                  }),
+                  (0, i.jsx)(`li`, {
+                    children: `O decisor pode participar da mudança.`,
+                  }),
+                ],
+              }),
+            ],
+          }),
+          (0, i.jsxs)(`form`, {
+            className: `diagnosis-form`,
+            "aria-label": `Solicitação de avaliação comercial inicial`,
+            action: `https://formspree.io/f/xkgbwglk`,
+            method: `POST`,
+            onSubmit: async (e) => {
+              e.preventDefault();
+              let t = e.currentTarget,
+                n = new FormData(t),
+                r = String(n.get(`Nome`) ?? ``),
+                i = String(n.get(`Email`) ?? ``),
+                a = String(n.get(`Telefone`) ?? ``),
+                o = String(n.get(`Empresa`) ?? ``),
+                s = String(n.get(`Setor`) ?? ``),
+                c = String(n.get(`Faturamento`) ?? ``),
+                l = String(n.get(`Gargalo`) ?? ``),
+                u = Date.now(),
+                d = new Date().toISOString(),
+                f = new FormData();
+              (f.append(`Nome`, r),
+                f.append(`email`, i),
+                f.append(`WhatsApp`, a),
+                f.append(`Empresa`, o),
+                f.append(`Setor`, s),
+                f.append(`Faturamento`, c),
+                f.append(`Gargalo`, l),
+                f.append(`_subject`, `Nova solicitação de diagnóstico — ${o}`),
+                v(`submitting`));
+              try {
+                let e = fetch(`https://formspree.io/f/xkgbwglk`, {
+                    method: `POST`,
+                    headers: { Accept: `application/json` },
+                    body: f,
+                  }).then(async (e) => {
+                    if (!e.ok)
+                      throw Error(
+                        `Formspree respondeu com status ${e.status}.`,
+                      );
+                    return e;
+                  }),
+                  n = fetch(
+                    `https://crm---grupo-portel-default-rtdb.firebaseio.com/crm_data/leads/${u}.json`,
+                    {
+                      method: `PUT`,
+                      headers: { "Content-Type": `application/json` },
+                      body: JSON.stringify({
+                        id: u,
+                        nome: `${r} (${o})`,
+                        email: i,
+                        telefone: a,
+                        whatsapp: a,
+                        nicho: s,
+                        origem: `site`,
+                        status: `nenhuma`,
+                        obs: `Faturamento estimado: ${c} | Gargalo percebido: ${l}`,
+                        data_entrada: d.slice(0, 10),
+                        createdAt: d,
+                        updatedAt: d,
+                      }),
+                    },
+                  ),
+                  p = fetch(`https://api.emailjs.com/api/v1.0/email/send`, {
+                    method: `POST`,
+                    headers: { "Content-Type": `application/json` },
+                    body: JSON.stringify({
+                      service_id: `service_34pa4so`,
+                      template_id: `template_xzrnokg`,
+                      user_id: `2ywUNfa0aE9SElHK1`,
+                      template_params: { to_name: r, to_email: i, empresa: o },
+                    }),
+                  }),
+                  [m] = await Promise.allSettled([e, n, p]);
+                if (m.status === `rejected`) throw m.reason;
+                (t.reset(), v(`success`));
+              } catch {
+                v(`error`);
+              }
+            },
+            children: [
+              (0, i.jsxs)(`div`, {
+                className: `form-intro`,
+                children: [
+                  (0, i.jsx)(`strong`, {
+                    children: `Conte-nos sobre a sua operação`,
+                  }),
+                  (0, i.jsx)(`span`, { children: `Leva cerca de 2 minutos.` }),
+                ],
+              }),
+              (0, i.jsxs)(`div`, {
+                className: `form-row`,
+                children: [
+                  (0, i.jsxs)(`label`, {
+                    children: [
+                      (0, i.jsx)(`span`, { children: `Nome completo` }),
+                      (0, i.jsx)(`input`, {
+                        type: `text`,
+                        name: `Nome`,
+                        required: !0,
+                        autoComplete: `name`,
+                        placeholder: `Seu nome`,
+                      }),
+                    ],
+                  }),
+                  (0, i.jsxs)(`label`, {
+                    children: [
+                      (0, i.jsx)(`span`, { children: `E-mail corporativo` }),
+                      (0, i.jsx)(`input`, {
+                        type: `email`,
+                        name: `Email`,
+                        required: !0,
+                        autoComplete: `email`,
+                        placeholder: `seu@email.com`,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, i.jsxs)(`div`, {
+                className: `form-row`,
+                children: [
+                  (0, i.jsxs)(`label`, {
+                    children: [
+                      (0, i.jsx)(`span`, { children: `WhatsApp` }),
+                      (0, i.jsx)(`input`, {
+                        type: `tel`,
+                        name: `Telefone`,
+                        required: !0,
+                        autoComplete: `tel`,
+                        placeholder: `(00) 00000-0000`,
+                      }),
+                    ],
+                  }),
+                  (0, i.jsxs)(`label`, {
+                    children: [
+                      (0, i.jsx)(`span`, { children: `Nome da empresa` }),
+                      (0, i.jsx)(`input`, {
+                        type: `text`,
+                        name: `Empresa`,
+                        required: !0,
+                        autoComplete: `organization`,
+                        placeholder: `Sua empresa`,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, i.jsxs)(`div`, {
+                className: `form-row`,
+                children: [
+                  (0, i.jsxs)(`label`, {
+                    children: [
+                      (0, i.jsx)(`span`, { children: `Setor de atuação` }),
+                      (0, i.jsxs)(`select`, {
+                        name: `Setor`,
+                        required: !0,
+                        defaultValue: ``,
+                        children: [
+                          (0, i.jsx)(`option`, {
+                            value: ``,
+                            disabled: !0,
+                            children: `Selecione o setor`,
+                          }),
+                          (0, i.jsx)(`option`, {
+                            value: `Serviços B2B`,
+                            children: `Serviços B2B`,
+                          }),
+                          (0, i.jsx)(`option`, {
+                            value: `Indústria`,
+                            children: `Indústria / Manufatura`,
+                          }),
+                          (0, i.jsx)(`option`, {
+                            value: `Tecnologia`,
+                            children: `Tecnologia / SaaS`,
+                          }),
+                          (0, i.jsx)(`option`, {
+                            value: `Varejo`,
+                            children: `Varejo de Alta Renda`,
+                          }),
+                          (0, i.jsx)(`option`, {
+                            value: `Agronegócio`,
+                            children: `Agronegócio`,
+                          }),
+                          (0, i.jsx)(`option`, {
+                            value: `Outros`,
+                            children: `Outros`,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, i.jsxs)(`label`, {
+                    children: [
+                      (0, i.jsx)(`span`, {
+                        children: `Faturamento mensal estimado`,
+                      }),
+                      (0, i.jsxs)(`select`, {
+                        name: `Faturamento`,
+                        required: !0,
+                        defaultValue: ``,
+                        children: [
+                          (0, i.jsx)(`option`, {
+                            value: ``,
+                            disabled: !0,
+                            children: `Selecione a faixa`,
+                          }),
+                          (0, i.jsx)(`option`, {
+                            value: `Até R$ 50k`,
+                            children: `Até R$ 50 mil`,
+                          }),
+                          (0, i.jsx)(`option`, {
+                            value: `R$ 51k a R$ 200k`,
+                            children: `R$ 51 mil a R$ 200 mil`,
+                          }),
+                          (0, i.jsx)(`option`, {
+                            value: `R$ 201k a R$ 500k`,
+                            children: `R$ 201 mil a R$ 500 mil`,
+                          }),
+                          (0, i.jsx)(`option`, {
+                            value: `Acima de R$ 500k`,
+                            children: `Acima de R$ 500 mil`,
+                          }),
+                        ],
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, i.jsxs)(`label`, {
+                children: [
+                  (0, i.jsx)(`span`, {
+                    children: `Principal gargalo percebido hoje`,
+                  }),
+                  (0, i.jsxs)(`select`, {
+                    name: `Gargalo`,
+                    required: !0,
+                    defaultValue: ``,
+                    children: [
+                      (0, i.jsx)(`option`, {
+                        value: ``,
+                        disabled: !0,
+                        children: `Selecione o principal desafio`,
+                      }),
+                      (0, i.jsx)(`option`, {
+                        value: `Posicionamento ou oferta`,
+                        children: `Posicionamento ou oferta pouco clara`,
+                      }),
+                      (0, i.jsx)(`option`, {
+                        value: `Aquisição`,
+                        children: `Poucas oportunidades ou dependência de indicação`,
+                      }),
+                      (0, i.jsx)(`option`, {
+                        value: `Funil ou CRM`,
+                        children: `Leads se perdem no funil ou no CRM`,
+                      }),
+                      (0, i.jsx)(`option`, {
+                        value: `Conversão comercial`,
+                        children: `Baixa conversão em reuniões e propostas`,
+                      }),
+                      (0, i.jsx)(`option`, {
+                        value: `Retenção ou recompra`,
+                        children: `Pouca retenção, recompra ou indicação`,
+                      }),
+                      (0, i.jsx)(`option`, {
+                        value: `Sem clareza`,
+                        children: `Ainda não sei onde está o gargalo`,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+              (0, i.jsx)(`button`, {
+                className: `form-submit`,
+                type: `submit`,
+                disabled: _ === `submitting`,
+                children:
+                  _ === `submitting`
+                    ? `Enviando solicitação...`
+                    : `Quero meu diagnóstico inicial`,
+              }),
+              _ === `success` &&
+                (0, i.jsx)(`p`, {
+                  className: `form-feedback is-success`,
+                  role: `status`,
+                  children: `Solicitação recebida. Nossa equipe entrará em contato pelos dados informados.`,
+                }),
+              _ === `error` &&
+                (0, i.jsx)(`p`, {
+                  className: `form-feedback is-error`,
+                  role: `alert`,
+                  children: `Não foi possível enviar agora. Tente novamente ou fale conosco pelo WhatsApp.`,
+                }),
+              (0, i.jsxs)(`p`, {
+                className: `form-privacy`,
+                children: [
+                  `Seus dados serão usados somente para analisar a solicitação e realizar este contato. Consulte a `,
+                  (0, i.jsx)(`a`, {
+                    href: `/privacidade/`,
+                    children: `Política de Privacidade`,
+                  }),
+                  `.`,
+                ],
+              }),
+              (0, i.jsx)(`a`, {
+                className: `form-whatsapp`,
+                href: `https://wa.me/5521997857460`,
+                target: `_blank`,
+                rel: `noreferrer`,
+                children: `Prefere conversar? Chame pelo WhatsApp.`,
+              }),
+            ],
+          }),
+        ],
+      }),
+      (0, i.jsxs)(`footer`, {
+        children: [
+          (0, i.jsxs)(`div`, {
+            className: `brand`,
+            children: [
+              (0, i.jsx)(`span`, {
+                className: `brand-mark`,
+                children: (0, i.jsx)(`img`, {
+                  src: `/assets/logo-grupo-portel.png`,
+                  alt: ``,
+                }),
+              }),
+              (0, i.jsx)(`span`, { children: `GRUPO PORTEL` }),
+            ],
+          }),
+          (0, i.jsx)(`p`, {
+            children: `Engenharia de vendas para marcas em crescimento.`,
+          }),
+          (0, i.jsxs)(`div`, {
+            className: `footer-meta`,
+            children: [
+              (0, i.jsxs)(`nav`, {
+                "aria-label": `Documentos legais`,
+                children: [
+                  (0, i.jsx)(`a`, {
+                    href: `/privacidade/`,
+                    children: `Política de Privacidade`,
+                  }),
+                  (0, i.jsx)(`a`, {
+                    href: `/termos/`,
+                    children: `Termos de Uso`,
+                  }),
+                ],
+              }),
+              (0, i.jsx)(`p`, {
+                children: `© 2026 Grupo Portel. Todos os direitos reservados.`,
+              }),
+            ],
+          }),
+        ],
+      }),
+    ],
+  });
+}
+export { s as default };
