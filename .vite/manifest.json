@@ -11,7 +11,7 @@
     "name": "rolldown-runtime"
   },
   "app/page.tsx": {
-    "file": "_next/static/chunks/page-tMcsPz3L.js",
+    "file": "_next/static/chunks/page-4065b496.js",
     "name": "page",
     "src": "app/page.tsx",
     "isDynamicEntry": true,
