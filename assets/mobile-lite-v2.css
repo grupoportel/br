@@ -1,0 +1,21 @@
+/* Class selected before styles load: no desktop sprites/runtime on small screens. */
+.mobile-lite { scroll-behavior: auto; }
+.mobile-lite .journey { height: 440svh; }
+.mobile-lite .journey-sticky { height: 100svh; min-height: 100svh; contain: layout paint; --season-transition: 0s; transition: none; }
+.mobile-lite .scene *, .mobile-lite .scene::before, .mobile-lite .scene::after { animation: none; transition: none; filter: none; will-change: auto; }
+.mobile-lite .sky-glow,.mobile-lite .sun,.mobile-lite .cloud,.mobile-lite .mountain,.mobile-lite .distant-forest,.mobile-lite .snowfall,.mobile-lite .rainfall,.mobile-lite .grove,.mobile-lite .flowers,.mobile-lite .falling-leaves,.mobile-lite .foreground-grove,.mobile-lite .foreground-meadow,.mobile-lite .rough-transition,.mobile-lite .far-hill-two { display: none !important; background-image: none !important; }
+.mobile-lite .far-hill-one { transform: none; }
+.mobile-lite .rough-capybara { left: 0; bottom: 7%; animation: none; transition: none; transform: translate3d(0,0,0); will-change: transform; --frame-size: 160px; }
+.mobile-lite .rough-walk { opacity: 1; transform: none; animation: rough-walk .5s steps(4,end) infinite; animation-play-state: paused; will-change: auto; }
+.mobile-lite .rough-capybara.mobile-walking .rough-walk { animation-play-state: running; }
+.mobile-lite .story-chapter { opacity: 1; transform: none; filter: none; will-change: auto; }
+.mobile-lite .story-chapter[hidden] { display: none; }
+.mobile-lite .story-chapter:not(:first-child) { opacity: 0; }
+.mobile-lite .story-chapter[aria-hidden="false"] { opacity: 1; }
+.mobile-lite .story-copy { text-shadow: 0 2px 6px rgba(1,12,20,.5); }
+.mobile-lite .story-kicker,.mobile-lite .nav-cta { backdrop-filter: none; -webkit-backdrop-filter: none; }
+.mobile-lite .method-section,.mobile-lite .services-section,.mobile-lite .process-section,.mobile-lite .contact-section,.mobile-lite footer { content-visibility: visible; }
+@media (prefers-reduced-motion: reduce) {
+  .mobile-lite .rough-walk { animation: none !important; }
+}
+.mobile-lite body { --font-body: system-ui, sans-serif !important; --font-display: system-ui, sans-serif !important; }
