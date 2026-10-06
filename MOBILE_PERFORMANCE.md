@@ -2,6 +2,8 @@
 
 This repository contains the published static export, not the editable React source.
 The home page selects a lightweight DOM controller at initial widths up to 900px.
+The selection runs after the viewport meta tag and also recognizes mobile user agents,
+so Android browsers cannot select desktop based on their initial 980px layout viewport.
 Larger initial widths import the existing desktop runtime unchanged.
 
 ## Changes
@@ -23,7 +25,7 @@ with the desktop runtime after it has been simplified. Desktop behavior is uncha
 
 Run `node tools/verify-mobile.cjs` with Playwright available via NODE_PATH and Microsoft
 Edge installed. All form destinations are intercepted; no test leads are submitted.
-Checks cover 390px, 768px and 1280px, phase progression, resource loading, overflow,
+Checks cover mobile browser contexts at 390px and 768px, desktop at 1280px, phase progression, resource loading, overflow,
 form success/failure and reduced motion. A local comparison with the committed export
 measured decoded resource bodies at 1,062,323 bytes before and 429,489 bytes after,
 with scene descendants reduced from 173 to 6. These are local load measurements,

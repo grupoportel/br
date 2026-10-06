@@ -6,7 +6,7 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
-const baseline = execFileSync('git', ['show', 'HEAD:index.html'], {cwd: root});
+const baseline = execFileSync('git', ['show', '5db4fe69daf03b926badc4f320248a187259c1da:index.html'], {cwd: root});
 const mime = {'.html':'text/html', '.js':'text/javascript', '.css':'text/css', '.png':'image/png', '.woff2':'font/woff2'};
 const server = http.createServer((request, response) => {
   if (request.url === '/baseline') { response.setHeader('Content-Type','text/html'); response.end(baseline); return; }
@@ -21,7 +21,7 @@ const server = http.createServer((request, response) => {
   const browser = await chromium.launch({channel:'msedge', headless:true});
   try {
     for (const width of [390, 768, 1280]) {
-      const context = await browser.newContext({viewport:{width,height:844}, hasTouch:width<=900});
+      const context = await browser.newContext({viewport:{width,height:844}, hasTouch:width<=900, isMobile:width<=900});
       let failed = false;
       await context.route('**/*', route => {
         if (route.request().url().startsWith(url)) return route.continue();
