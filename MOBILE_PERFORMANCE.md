@@ -31,8 +31,16 @@ measured decoded resource bodies at 1,062,323 bytes before and 429,489 bytes aft
 with scene descendants reduced from 173 to 6. These are local load measurements,
 not field Core Web Vitals or an FPS guarantee on physical devices.
 
+## Incremental scenery test
+
+Version v3 adds two static CSS trees at the sides, using the existing seasonal colors
+and snow caps in winter. This adds two DOM elements and no image requests or ongoing
+animations. Local decoded resource bodies increased from 429,515 to 430,781 bytes.
+Mobile scene descendants are now 8; desktop remains 173. Physical-device smoothness
+is being checked on the user's Samsung A15 before adding more scenery.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, and assets/mobile-lite-v2.{js,css}.
+the desktop-only preload media queries, and assets/mobile-lite-v3.{js,css}.
 The older source in ../../08_Site does not include these static-export changes.
