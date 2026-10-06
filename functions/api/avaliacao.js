@@ -1,4 +1,5 @@
 // Public intake only. Administrative CRM credentials never belong in browser code.
+import { forwardSiteLead } from '../_lib/site-lead.js';
 const MAX_BYTES = 8192;
 const limits = {Nome:120, Email:254, Telefone:32, Empresa:160, Setor:80, Faturamento:80, Gargalo:120, website:200};
 const options = {
@@ -22,7 +23,8 @@ async function limitedBody(request) {
   finally {reader.releaseLock();}
   const bytes=new Uint8Array(size);let offset=0;for(const chunk of chunks){bytes.set(chunk,offset);offset+=chunk.length;}return bytes;
 }
-export async function onRequest({request}) {
+export async function onRequest(context) {
+  const {request, env = {}} = context;
   if(request.method!=='POST')return new Response(null,{status:405,headers:{Allow:'POST','Cache-Control':'no-store'}});
   const origin=request.headers.get('origin');
   if(origin!=='https://grupoportel.com')return reply(request,403);
@@ -51,6 +53,13 @@ export async function onRequest({request}) {
   try {
     const response=await fetch('https://formspree.io/f/xkgbwglk',{method:'POST',headers:{Accept:'application/json'},body:payload,signal:AbortSignal.timeout(8000)});
     if(!response.ok)return reply(request,502);
+    // The email receipt remains the record if the automation is unavailable.
+    // Dispatch after acceptance; no CRM delivery claim is made in the browser response.
+    const delivery = forwardSiteLead(values, env).catch(() => {
+      console.error('[site-lead] Automation delivery failed; review Formspree Inbox.');
+    });
+    if (context.waitUntil) context.waitUntil(delivery);
+    else await delivery;
     return reply(request,200,true);
   }catch{return reply(request,502);}
 }

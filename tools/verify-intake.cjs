@@ -1,6 +1,8 @@
 const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
 (async()=>{
-const file=fs.readFileSync(path.join(__dirname,'../functions/api/avaliacao.js'),'utf8');
+const library=fs.readFileSync(path.join(__dirname,'../functions/_lib/site-lead.js'),'utf8');
+const libraryUrl='data:text/javascript;base64,'+Buffer.from(library).toString('base64');
+const file=fs.readFileSync(path.join(__dirname,'../functions/api/avaliacao.js'),'utf8').replace('../_lib/site-lead.js',libraryUrl);
 const {onRequest}=await import('data:text/javascript;base64,'+Buffer.from(file).toString('base64'));
 let calls=0,fail=false;
 const original=global.fetch;global.fetch=async(url,options)=>{calls++;assert.equal(url,'https://formspree.io/f/xkgbwglk');assert.equal(options.body.get('email'),'teste@example.com');return new Response('{}',{status:fail?500:200});};
