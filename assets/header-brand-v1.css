@@ -1,0 +1,12 @@
+/* Give the brand more presence on desktop without changing the mobile header. */
+@media (min-width: 901px) {
+  .site-header .brand {
+    font-size: 1.125rem;
+    gap: 1rem;
+    letter-spacing: .08em;
+  }
+  .site-header .brand-mark {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+}
