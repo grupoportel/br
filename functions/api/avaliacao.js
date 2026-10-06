@@ -58,7 +58,11 @@ export async function onRequest(context) {
     const delivery = forwardSiteLead(values, env).then(status => {
       console.info(`[site-lead] Automation ${status}.`);
     }).catch(error => {
-      const reason = /^make-(config|delivery-\d{3})$/.test(error.message) ? error.message : 'network';
+      const reason = /^make-(config|delivery-\d{3})$/.test(error.message) ? error.message
+        : /header|ByteString|character/i.test(error.message) ? 'invalid-key-header'
+        : /invocation|this value/i.test(error.message) ? 'fetch-context'
+        : /redirect/i.test(error.message) ? 'redirect'
+        : /timeout|abort/i.test(error.name) ? 'timeout' : 'network';
       console.error(`[site-lead] Automation delivery failed (${reason}); review Formspree Inbox.`);
     });
     if (context.waitUntil) context.waitUntil(delivery);
