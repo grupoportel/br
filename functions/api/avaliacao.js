@@ -55,8 +55,11 @@ export async function onRequest(context) {
     if(!response.ok)return reply(request,502);
     // The email receipt remains the record if the automation is unavailable.
     // Dispatch after acceptance; no CRM delivery claim is made in the browser response.
-    const delivery = forwardSiteLead(values, env).catch(() => {
-      console.error('[site-lead] Automation delivery failed; review Formspree Inbox.');
+    const delivery = forwardSiteLead(values, env).then(status => {
+      console.info(`[site-lead] Automation ${status}.`);
+    }).catch(error => {
+      const reason = /^make-(config|delivery-\d{3})$/.test(error.message) ? error.message : 'network';
+      console.error(`[site-lead] Automation delivery failed (${reason}); review Formspree Inbox.`);
     });
     if (context.waitUntil) context.waitUntil(delivery);
     else await delivery;

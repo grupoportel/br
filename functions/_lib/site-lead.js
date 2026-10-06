@@ -21,6 +21,6 @@ export async function forwardSiteLead(values, env = {}, fetcher = fetch) {
     headers: {'Content-Type': 'application/json', 'x-make-apikey': env.MAKE_SITE_API_KEY},
     body: JSON.stringify(payload), signal: AbortSignal.timeout(5000),
   });
-  if (!response.ok) throw new Error('make-delivery');
+  if (!response.ok) throw new Error(`make-delivery-${response.status}`);
   return 'accepted';
 }
