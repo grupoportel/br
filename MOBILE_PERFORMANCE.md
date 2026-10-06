@@ -71,9 +71,15 @@ the main text. The background panel is removed; inactive labels use muted color 
 the active phase has a short fine line. The right tree moves inward to keep labels
 clear of its canopy. The capybara returns to its previous vertical position.
 
+Version v10 adds a small static CSS cloud below the text on the left. It is visible
+in spring and summer, with a darker color during summer rain. One DOM node plus two
+pseudo-elements are used, with no image requests or animations. Resource bodies total
+436,693 bytes, about 910 bytes above the previous version; scene descendants total 25.
+CSS v9 had moved the phase rail down to 60% of the hero height.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, assets/mobile-lite-v7.js, mobile-lite-v8.css, and
+the desktop-only preload media queries, assets/mobile-lite-v10.{js,css}, and
 assets/desktop-route-v1.css.
 The older source in ../../08_Site does not include these static-export changes.

@@ -54,6 +54,7 @@ const server = http.createServer((request, response) => {
           assert.equal(await page.locator('.season-rail [aria-current="step"]').count(), 1);
           assert.equal(await page.locator('.mobile-snow').isVisible(), phase === 'winter');
           assert.equal(await page.locator('.mobile-rain').isVisible(), phase === 'summer');
+          if (width===390 && phase==='spring') await page.screenshot({path:path.join(process.env.TEMP,'portel-mobile-cloud.png')});
         }
         for (const progress of [0, .5, 1]) {
           await page.evaluate(progress => {const j=document.querySelector('.journey'); scrollTo(0,j.offsetTop+(j.offsetHeight-document.querySelector('.journey-sticky').offsetHeight)*progress);}, progress);
