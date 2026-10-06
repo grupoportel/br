@@ -60,8 +60,15 @@ strip above the progress prompt. The active phase has a teal underline and aria-
 The sprite is raised 18px to keep its path above the strip. No new elements or images
 are added; decoded resource bodies total 435,150 bytes, about 1.3KB above v6.
 
+Desktop route v1 applies a separate CSS keyframe only outside mobile mode. The route
+runs continuously from outside the left edge to outside the right edge, rather than
+pausing in the center between 30% and 70%. Existing desktop sprite state transitions
+and scenery remain controlled by the original runtime. Endpoint and midpoint geometry
+are checked in the desktop browser test with scroll anchoring disabled for measurement.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, and assets/mobile-lite-v7.{js,css}.
+the desktop-only preload media queries, assets/mobile-lite-v7.{js,css}, and
+assets/desktop-route-v1.css.
 The older source in ../../08_Site does not include these static-export changes.

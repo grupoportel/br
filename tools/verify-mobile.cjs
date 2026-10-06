@@ -90,9 +90,19 @@ const server = http.createServer((request, response) => {
         await page.emulateMedia({reducedMotion:'reduce'});
         assert.equal(await page.locator('.rough-walk').evaluate(node=>getComputedStyle(node).animationName), 'none');
       } else {
+        // Avoid scroll anchoring to moving scenery while measuring exact endpoints.
+        await page.addStyleTag({content:'html,body,.journey{overflow-anchor:none;scroll-behavior:auto}'});
         await page.evaluate(() => {const j=document.querySelector('.journey'); scrollTo(0,j.offsetTop+(j.offsetHeight-innerHeight)*.55);});
         await page.waitForFunction(() => document.querySelector('.journey-sticky').dataset.season === 'summer');
         assert.equal(await page.locator('.journey-sticky').getAttribute('data-season'), 'summer');
+        for (const progress of [0, .5, 1]) {
+          await page.evaluate(progress => {const j=document.querySelector('.journey'); scrollTo({top:j.getBoundingClientRect().top+scrollY+(j.offsetHeight-innerHeight)*progress,behavior:'instant'});}, progress);
+          await page.waitForTimeout(250);
+          const bounds = await page.locator('.rough-capybara').evaluate(node=>{const r=node.getBoundingClientRect();return {left:r.left,right:r.right,center:r.left+r.width/2,width:innerWidth};});
+          if (progress===0) assert(bounds.right<=2, 'Desktop capybara starts outside the left edge');
+          if (progress===.5) assert(Math.abs(bounds.center-bounds.width/2)<=3, 'Desktop capybara crosses the center');
+          if (progress===1) assert(bounds.left>=bounds.width-2, 'Desktop capybara ends outside the right edge');
+        }
       }
       console.log(JSON.stringify({width,...metrics,errors,localRequests:requests.filter(r=>r.startsWith(url)).length}));
       await context.close();

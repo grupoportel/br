@@ -1,0 +1,11 @@
+/* Desktop-only route; retain the existing walking and standing sprite states. */
+html:not(.mobile-lite) .rough-capybara {
+  --capy-start: calc(var(--frame-size) * -.5 - 2px);
+  --capy-end: calc(100% + var(--frame-size) * .5 + 2px);
+  animation-name: desktop-capy-crossing;
+  animation-timing-function: linear;
+}
+@keyframes desktop-capy-crossing {
+  from { left: var(--capy-start); }
+  to { left: var(--capy-end); }
+}
