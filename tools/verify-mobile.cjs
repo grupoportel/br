@@ -44,13 +44,15 @@ const server = http.createServer((request, response) => {
       if (mobile) {
         assert.equal(requests.some(r=>r.includes('capy-transition')), false);
         assert.equal(requests.some(r=>r.includes('.woff2')), false);
-        assert(metrics.nodes<15);
+        assert(metrics.nodes<30);
         for (const [phase, progress] of ['winter','spring','summer','autumn'].map((phase,index)=>[phase,index/4+.03])) {
           await page.evaluate(progress => {const j=document.querySelector('.journey'); scrollTo(0,j.offsetTop+(j.offsetHeight-document.querySelector('.journey-sticky').offsetHeight)*progress);}, progress);
           await page.waitForTimeout(150);
           assert.equal(await page.locator('.journey-sticky').getAttribute('data-season'), phase);
           assert.equal(await page.locator('.story-chapter:visible').count(), 1);
           assert(await page.locator('.rough-capybara').evaluate(node => node.getBoundingClientRect().right <= innerWidth + 1));
+          assert.equal(await page.locator('.mobile-snow').isVisible(), phase === 'winter');
+          assert.equal(await page.locator('.mobile-rain').isVisible(), phase === 'summer');
         }
         await page.evaluate(()=>scrollTo(0,0));
         await page.waitForTimeout(150);
@@ -74,6 +76,7 @@ const server = http.createServer((request, response) => {
         failed=true;
         await page.locator('.form-submit').click();
         await page.locator('.form-feedback.is-error').waitFor();
+        assert.equal(await page.locator('.mobile-snow span').first().evaluate(node=>getComputedStyle(node).animationPlayState), 'paused');
         failed=false;
         await page.emulateMedia({reducedMotion:'reduce'});
         assert.equal(await page.locator('.rough-walk').evaluate(node=>getComputedStyle(node).animationName), 'none');

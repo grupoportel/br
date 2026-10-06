@@ -39,8 +39,14 @@ animations. Local decoded resource bodies increased from 429,515 to 430,781 byte
 Mobile scene descendants are now 8; desktop remains 173. Physical-device smoothness
 is being checked on the user's Samsung A15 before adding more scenery.
 
+Version v4 tests 6 snowflakes and 7 rain streaks, with only the current season visible.
+Transform-only CSS animations pause outside the hero or when the document is hidden.
+Reduced motion disables both layers. No particle images are fetched. Decoded resource
+bodies are now 432,699 bytes, about 1.9KB above v3; scene descendants total 23, with at
+most 7 moving weather particles. Device performance remains subject to the A15 test.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, and assets/mobile-lite-v3.{js,css}.
+the desktop-only preload media queries, and assets/mobile-lite-v4.{js,css}.
 The older source in ../../08_Site does not include these static-export changes.
