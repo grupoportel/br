@@ -50,9 +50,16 @@ const server = http.createServer((request, response) => {
           await page.waitForTimeout(150);
           assert.equal(await page.locator('.journey-sticky').getAttribute('data-season'), phase);
           assert.equal(await page.locator('.story-chapter:visible').count(), 1);
-          assert(await page.locator('.rough-capybara').evaluate(node => node.getBoundingClientRect().right <= innerWidth + 1));
           assert.equal(await page.locator('.mobile-snow').isVisible(), phase === 'winter');
           assert.equal(await page.locator('.mobile-rain').isVisible(), phase === 'summer');
+        }
+        for (const progress of [0, .5, 1]) {
+          await page.evaluate(progress => {const j=document.querySelector('.journey'); scrollTo(0,j.offsetTop+(j.offsetHeight-document.querySelector('.journey-sticky').offsetHeight)*progress);}, progress);
+          await page.waitForTimeout(150);
+          const bounds = await page.locator('.rough-capybara').evaluate(node => {const r=node.getBoundingClientRect(); return {left:r.left,right:r.right,center:r.left+r.width/2,width:innerWidth};});
+          if (progress===0) assert(bounds.right<=1, 'Capybara starts outside the left edge');
+          if (progress===.5) assert(Math.abs(bounds.center-bounds.width/2)<=1, 'Capybara crosses the center');
+          if (progress===1) assert(bounds.left>=bounds.width-1, 'Capybara ends outside the right edge');
         }
         await page.evaluate(()=>scrollTo(0,0));
         await page.waitForTimeout(150);

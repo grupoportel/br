@@ -50,8 +50,13 @@ winter/autumn, a sun in spring/summer. It sits above the text, below the header.
 No new images or animations are introduced. Decoded resource bodies are now 433,814
 bytes, about 1.1KB above v4; mobile scene descendants total 24.
 
+Version v6 moves the capybara from one full sprite width outside the left edge to
+the viewport's right edge. It crosses the center at 50% journey progress and is
+fully outside the viewport at both endpoints. Resize remeasures the route. No new
+images or elements are added. Verification checks both endpoints and midpoint.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, and assets/mobile-lite-v5.{js,css}.
+the desktop-only preload media queries, assets/mobile-lite-v6.js and mobile-lite-v5.css.
 The older source in ../../08_Site does not include these static-export changes.
