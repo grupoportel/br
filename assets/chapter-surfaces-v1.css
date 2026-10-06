@@ -1,0 +1,42 @@
+/* Full-width surfaces and a shared content axis, with no decorative cards. */
+.public-section,.method-section,.services-section,.process-section {
+  padding-inline: max(1.5rem,calc((100% - 1152px)/2));
+  padding-block: clamp(3.5rem,5vw,5rem);
+  scroll-margin-top:100px;
+}
+#sobre {
+  background: #123b3e;
+  color: #f6f1e8;
+  --ink: #f6f1e8;
+  --muted: #c4d8d5;
+  --teal-dark: #72dfcd;
+}
+.method-section,#situacoes {
+  background: #deebe4;
+  --ink: #193c3e;
+  --muted: #415f5c;
+  --teal: #23665e;
+  --teal-dark: #23665e;
+}
+.method-section {gap:clamp(2rem,6vw,6rem)}
+.method-copy {padding-top:1.5rem}
+.method-section .section-heading h2,.process-section .section-heading h2 {
+  font-size:clamp(2.25rem,3.5vw,3.5rem);
+}
+.process-section {background:#f6f1e8}
+#situacoes {padding-top:clamp(3.5rem,5vw,5rem)}
+.site-header,.site-header.header-content {
+  background:linear-gradient(var(--header-surface,#031320) 65%,transparent);
+}
+@media (max-width:900px) {
+  .public-section,.method-section,.services-section,.process-section {
+    padding:3rem 1.5rem;
+    scroll-margin-top:85px;
+  }
+  .method-section {gap:1.5rem}
+  .method-copy {padding-top:0}
+  .method-section .section-heading h2,.process-section .section-heading h2 {
+    font-size:clamp(1.85rem,6.5vw,2.8rem);
+  }
+  #situacoes {padding-top:3rem}
+}
