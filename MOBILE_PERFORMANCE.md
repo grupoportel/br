@@ -55,8 +55,13 @@ the viewport's right edge. It crosses the center at 50% journey progress and is
 fully outside the viewport at both endpoints. Resize remeasures the route. No new
 images or elements are added. Verification checks both endpoints and midpoint.
 
+Version v7 restores the existing four-phase rail on mobile as a compact horizontal
+strip above the progress prompt. The active phase has a teal underline and aria-current.
+The sprite is raised 18px to keep its path above the strip. No new elements or images
+are added; decoded resource bodies total 435,150 bytes, about 1.3KB above v6.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, assets/mobile-lite-v6.js and mobile-lite-v5.css.
+the desktop-only preload media queries, and assets/mobile-lite-v7.{js,css}.
 The older source in ../../08_Site does not include these static-export changes.

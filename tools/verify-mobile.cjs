@@ -50,6 +50,8 @@ const server = http.createServer((request, response) => {
           await page.waitForTimeout(150);
           assert.equal(await page.locator('.journey-sticky').getAttribute('data-season'), phase);
           assert.equal(await page.locator('.story-chapter:visible').count(), 1);
+          assert(await page.locator('.season-rail').isVisible());
+          assert.equal(await page.locator('.season-rail [aria-current="step"]').count(), 1);
           assert.equal(await page.locator('.mobile-snow').isVisible(), phase === 'winter');
           assert.equal(await page.locator('.mobile-rain').isVisible(), phase === 'summer');
         }

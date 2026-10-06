@@ -1,0 +1,145 @@
+/* Class selected before styles load: no desktop sprites/runtime on small screens. */
+.mobile-lite { scroll-behavior: auto; }
+.mobile-lite .journey { height: 440svh; }
+.mobile-lite .journey-sticky { height: 100svh; min-height: 100svh; contain: layout paint; --season-transition: 0s; transition: none; }
+.mobile-lite .scene *, .mobile-lite .scene::before, .mobile-lite .scene::after { animation: none; transition: none; filter: none; will-change: auto; }
+.mobile-lite .sky-glow,.mobile-lite .sun,.mobile-lite .cloud,.mobile-lite .mountain,.mobile-lite .distant-forest,.mobile-lite .snowfall,.mobile-lite .rainfall,.mobile-lite .grove,.mobile-lite .flowers,.mobile-lite .falling-leaves,.mobile-lite .foreground-grove,.mobile-lite .foreground-meadow,.mobile-lite .rough-transition,.mobile-lite .far-hill-two { display: none !important; background-image: none !important; }
+.mobile-lite .far-hill-one { transform: none; }
+.mobile-lite .rough-capybara { left: 0; bottom: 7%; animation: none; transition: none; transform: translate3d(0,0,0); will-change: transform; --frame-size: 160px; }
+.mobile-lite .rough-walk { opacity: 1; transform: none; animation: rough-walk .5s steps(4,end) infinite; animation-play-state: paused; will-change: auto; }
+.mobile-lite .rough-capybara.mobile-walking .rough-walk { animation-play-state: running; }
+.mobile-lite .story-chapter { opacity: 1; transform: none; filter: none; will-change: auto; }
+.mobile-lite .story-chapter[hidden] { display: none; }
+.mobile-lite .story-chapter:not(:first-child) { opacity: 0; }
+.mobile-lite .story-chapter[aria-hidden="false"] { opacity: 1; }
+.mobile-lite .story-copy { text-shadow: 0 2px 6px rgba(1,12,20,.5); }
+.mobile-lite .story-kicker,.mobile-lite .nav-cta { backdrop-filter: none; -webkit-backdrop-filter: none; }
+.mobile-lite .method-section,.mobile-lite .services-section,.mobile-lite .process-section,.mobile-lite .contact-section,.mobile-lite footer { content-visibility: visible; }
+@media (prefers-reduced-motion: reduce) {
+  .mobile-lite .rough-walk { animation: none !important; }
+}
+.mobile-lite body { --font-body: system-ui, sans-serif !important; --font-display: system-ui, sans-serif !important; }
+.mobile-lite .season-rail {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  top: auto;
+  right: auto;
+  left: 50%;
+  bottom: 3.1rem;
+  width: min(360px, calc(100% - 32px));
+  padding: 8px 12px;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  background: rgba(4,21,32,.62);
+  pointer-events: none;
+}
+.mobile-lite .season-rail span {
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255,255,255,.72);
+  font-size: .6rem;
+  line-height: 1.2;
+  letter-spacing: 0;
+  transition: none;
+}
+.mobile-lite .season-rail span.active { color: white; }
+.mobile-lite .season-rail i,
+.mobile-lite .season-rail span.active i { width: 100%; height: 2px; transition: none; }
+.mobile-lite .season-rail i { background: rgba(255,255,255,.25); }
+.mobile-lite .season-rail span.active i { background: var(--teal); }
+.mobile-lite .chapter-meta { display: none; }
+.mobile-lite .rough-capybara { bottom: calc(7% + 18px); }
+.mobile-lite .mobile-tree {
+  position: absolute;
+  z-index: 13;
+  bottom: 19%;
+  width: 12px;
+  height: clamp(90px, 19svh, 160px);
+  border-radius: 5px 5px 2px 2px;
+  background: #695044;
+  pointer-events: none;
+}
+.mobile-lite .mobile-tree-left { left: 8%; }
+.mobile-lite .mobile-tree-right { right: 9%; height: clamp(75px, 16svh, 135px); }
+.mobile-lite .mobile-tree::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -32px;
+  width: clamp(76px, 22vw, 112px);
+  height: clamp(66px, 20vw, 98px);
+  border-radius: 48% 52% 43% 47%;
+  transform: translateX(-50%);
+  background: var(--tree-soft);
+}
+.mobile-lite .mobile-tree::after {
+  content: '';
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  width: clamp(60px, 18vw, 90px);
+  height: 12px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  background: #e4edef;
+  display: none;
+}
+.mobile-lite [data-season="winter"] .mobile-tree::after { display: block; }
+.mobile-lite .mobile-celestial {
+  position: absolute;
+  z-index: 2;
+  top: 92px;
+  right: 9%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #dce5e7;
+  pointer-events: none;
+}
+.mobile-lite .mobile-celestial::before,
+.mobile-lite .mobile-celestial::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: #bbcdd3;
+}
+.mobile-lite .mobile-celestial::before { width: 10px; height: 10px; top: 9px; left: 10px; }
+.mobile-lite .mobile-celestial::after { width: 6px; height: 6px; bottom: 9px; right: 10px; }
+.mobile-lite [data-season="spring"] .mobile-celestial { background: #ffe2a0; }
+.mobile-lite [data-season="summer"] .mobile-celestial { background: #ffd16b; }
+.mobile-lite [data-season="spring"] .mobile-celestial::before,
+.mobile-lite [data-season="spring"] .mobile-celestial::after,
+.mobile-lite [data-season="summer"] .mobile-celestial::before,
+.mobile-lite [data-season="summer"] .mobile-celestial::after { display: none; }
+.mobile-lite .mobile-weather {
+  position: absolute;
+  inset: 0;
+  z-index: 22;
+  overflow: hidden;
+  pointer-events: none;
+  display: none;
+}
+.mobile-lite [data-season="winter"] .mobile-snow,
+.mobile-lite [data-season="summer"] .mobile-rain { display: block; }
+.mobile-lite .mobile-weather span {
+  position: absolute;
+  top: -20px;
+  background: #e5f5f7;
+  animation: mobile-weather-fall 8s linear infinite;
+  animation-delay: var(--weather-delay);
+  animation-play-state: paused;
+}
+.mobile-lite .mobile-snow span { width: 4px; height: 4px; border-radius: 50%; opacity: .5; }
+.mobile-lite .mobile-rain span { width: 1px; height: 15px; opacity: .35; animation-duration: 1.4s; }
+.mobile-lite .mobile-scene-visible[data-season="winter"] .mobile-snow span,
+.mobile-lite .mobile-scene-visible[data-season="summer"] .mobile-rain span { animation-play-state: running; }
+@keyframes mobile-weather-fall {
+  from { transform: translate3d(0,0,0); }
+  to { transform: translate3d(16px,calc(100svh + 40px),0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-lite .mobile-weather { display: none !important; }
+  .mobile-lite .mobile-weather span { animation: none !important; }
+}
