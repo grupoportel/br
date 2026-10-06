@@ -66,9 +66,14 @@ pausing in the center between 30% and 70%. Existing desktop sprite state transit
 and scenery remain controlled by the original runtime. Endpoint and midpoint geometry
 are checked in the desktop browser test with scroll anchoring disabled for measurement.
 
+Mobile CSS v8 moves the phase rail to a discreet vertical stack on the right, below
+the main text. The background panel is removed; inactive labels use muted color and
+the active phase has a short fine line. The right tree moves inward to keep labels
+clear of its canopy. The capybara returns to its previous vertical position.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, assets/mobile-lite-v7.{js,css}, and
+the desktop-only preload media queries, assets/mobile-lite-v7.js, mobile-lite-v8.css, and
 assets/desktop-route-v1.css.
 The older source in ../../08_Site does not include these static-export changes.
