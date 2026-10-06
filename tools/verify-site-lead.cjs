@@ -11,7 +11,7 @@ const path=require('node:path');
     calls++;
     assert.equal(url,env.MAKE_SITE_WEBHOOK_URL);
     assert.equal(options.headers['x-make-apikey'],env.MAKE_SITE_API_KEY);
-    assert.equal(options.redirect,'error');
+    assert.equal(options.redirect,'manual');
     const payload=JSON.parse(options.body);
     assert.equal(payload.nome,values.Empresa);
     assert.equal(payload.decisor,values.Nome);

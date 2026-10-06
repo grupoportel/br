@@ -17,7 +17,7 @@ export async function forwardSiteLead(values, env = {}, fetcher = fetch) {
     origem: 'site',
   };
   const response = await fetcher(url.href, {
-    method: 'POST', redirect: 'error',
+    method: 'POST', redirect: 'manual',
     headers: {'Content-Type': 'application/json', 'x-make-apikey': env.MAKE_SITE_API_KEY},
     body: JSON.stringify(payload), signal: AbortSignal.timeout(5000),
   });
