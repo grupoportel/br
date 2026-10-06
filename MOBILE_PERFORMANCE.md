@@ -45,8 +45,13 @@ Reduced motion disables both layers. No particle images are fetched. Decoded res
 bodies are now 432,699 bytes, about 1.9KB above v3; scene descendants total 23, with at
 most 7 moving weather particles. Device performance remains subject to the A15 test.
 
+Version v5 adds one static CSS celestial disc: a moon with two simple craters in
+winter/autumn, a sun in spring/summer. It sits above the text, below the header.
+No new images or animations are introduced. Decoded resource bodies are now 433,814
+bytes, about 1.1KB above v4; mobile scene descendants total 24.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, and assets/mobile-lite-v4.{js,css}.
+the desktop-only preload media queries, and assets/mobile-lite-v5.{js,css}.
 The older source in ../../08_Site does not include these static-export changes.
