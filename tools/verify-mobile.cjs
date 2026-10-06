@@ -44,7 +44,9 @@ const server = http.createServer((request, response) => {
       if (mobile) {
         assert.equal(requests.some(r=>r.includes('capy-transition')), false);
         assert.equal(requests.some(r=>r.includes('.woff2')), false);
-        assert(metrics.nodes<35);
+        assert(metrics.nodes<50);
+        assert.equal(await page.locator('.mobile-snow span').count(), 12);
+        assert.equal(await page.locator('.mobile-rain span').count(), 14);
         for (const [phase, progress] of ['winter','spring','summer','autumn'].map((phase,index)=>[phase,index/4+.03])) {
           await page.evaluate(progress => {const j=document.querySelector('.journey'); scrollTo(0,j.offsetTop+(j.offsetHeight-document.querySelector('.journey-sticky').offsetHeight)*progress);}, progress);
           await page.waitForTimeout(150);

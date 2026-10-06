@@ -86,9 +86,15 @@ progress prompt and below the capybara's visible route. Colors change with seaso
 They use CSS silhouettes without image requests or motion. Resource bodies total
 438,010 bytes (972 bytes above v11); scene descendants total 31.
 
+Version v13 doubles the small weather budgets to 12 snowflakes and 14 rain streaks.
+Only the matching season animates, with a maximum of 14 active weather particles.
+Visibility pausing and reduced-motion behavior are retained. No image requests are
+added; decoded resource bodies total 438,012 bytes, essentially unchanged from v12.
+Scene descendants total 44. Real-device smoothness is still confirmed on the A15.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, assets/mobile-lite-v12.{js,css}, and
+the desktop-only preload media queries, assets/mobile-lite-v13.js, mobile-lite-v12.css, and
 assets/desktop-route-v1.css.
 The older source in ../../08_Site does not include these static-export changes.
