@@ -50,6 +50,11 @@ const server = http.createServer((request, response) => {
       }));
       assert.equal(metrics.overflow, false, `Horizontal overflow at ${width}`);
       assert.equal(requests.some(r=>r.includes('framework-')), !mobile);
+      if (!mobile) {
+        assert.equal(requests.some(r=>r.includes('index-mobile-scroll-v1.js') || r.includes('layout-segment-context-mobile-scroll-v1.js')), false, 'Do not reuse the stale immutable runtime/provider');
+        assert.equal(requests.filter(r=>r.includes('/index-public-content-')).length, 1, 'Only one application runtime');
+        assert(await page.locator('h1').isVisible(), 'Desktop renders its main heading');
+      }
       if (mobile) {
         assert.equal(requests.some(r=>r.includes('capy-transition')), false);
         assert.equal(requests.some(r=>r.includes('.woff2')), false);
