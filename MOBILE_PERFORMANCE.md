@@ -98,3 +98,35 @@ If regenerating the static export, retain the conditional loader in index.html,
 the desktop-only preload media queries, assets/mobile-lite-v13.js, mobile-lite-v12.css, and
 assets/desktop-route-v1.css.
 The older source in ../../08_Site does not include these static-export changes.
+# Conteúdo público e proteção — outubro de 2026
+
+Atualização de segurança: mobile-lite-v14.js envia somente a /api/avaliacao.
+A Pages Function valida origem, tamanho e campos, descarta a armadilha para bots e
+encaminha a solicitação ao Formspree pelo servidor. Nenhum envio direto do navegador
+ao CRM ou EmailJS. O CRM já nega acesso anônimo nas regras publicadas, por isso a antiga
+tentativa de gravar leads pelo navegador não funcionava. Integração com CRM exige webhook
+autenticado em servidor; não liberar o banco para fazer o formulário funcionar.
+_routes.json restringe a execução de Functions a /api/avaliacao, preservando o cache
+e a entrega estática dos demais recursos. Proteção de taxa é aplicada na Cloudflare.
+_headers adiciona proteção contra iframe, política de permissões, nosniff, referrer
+e HSTS sem incluir subdomínios ou solicitar preload. A cópia pages.dev usa noindex.
+Executar tools/verify-intake.cjs; testa recusas sem enviar leads reais ao fornecedor.
+Regeneração: enrich-home.cjs, secure-intake.cjs e finalize-public-content.cjs, nessa ordem.
+
+A home inclui seções estáticas de apresentação, situações, entregas, exemplo fictício
+e FAQ com details/summary. assets/public-content-v1.css não adiciona animações.
+O runtime desktop usa index-public-content-v1.js e page-public-content-v1.js;
+mobile continua em mobile-lite-v13.js. HTML e árvore React foram atualizados juntos.
+
+tools/enrich-home.cjs aplica a seleção pública sobre o export anterior (uma vez;
+recusa execução se a home já estiver enriquecida). Depois executar
+tools/finalize-public-content.cjs para versionar o entry e recalcular hashes CSP.
+Ao regenerar de um export novo, revisar caminhos, conteúdo e destinos permitidos;
+não copiar bundles de versões incompatíveis. Remover os arquivos gerados antigos
+da área de geração antes de criar uma nova versão. Não incluir documentos internos.
+
+A CSP precisa ser recalculada após modificar scripts inline. Usa hashes dos scripts
+existentes e permite módulos locais, sem unsafe-eval. Proteções que dependem de
+cabeçalhos da hospedagem ou regras dos serviços não são substituídas por esta política.
+Verificação adicional cobre texto sem JS, FAQ nativa, canonical, JSON-LD, título,
+ausência de erros de hidratação/CSP e bloqueio de um script inline não autorizado.
