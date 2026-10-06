@@ -77,9 +77,13 @@ pseudo-elements are used, with no image requests or animations. Resource bodies 
 436,693 bytes, about 910 bytes above the previous version; scene descendants total 25.
 CSS v9 had moved the phase rail down to 60% of the hero height.
 
+Version v11 adds two smaller static clouds below the text, bringing the total to three.
+They use the same CSS shapes and season visibility; no new images or motion are added.
+Resource bodies total 437,038 bytes (345 bytes above v10); scene descendants total 27.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, assets/mobile-lite-v10.{js,css}, and
+the desktop-only preload media queries, assets/mobile-lite-v11.{js,css}, and
 assets/desktop-route-v1.css.
 The older source in ../../08_Site does not include these static-export changes.
