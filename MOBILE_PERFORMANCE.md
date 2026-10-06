@@ -81,9 +81,14 @@ Version v11 adds two smaller static clouds below the text, bringing the total to
 They use the same CSS shapes and season visibility; no new images or motion are added.
 Resource bodies total 437,038 bytes (345 bytes above v10); scene descendants total 27.
 
+Version v12 tests four small static grass tufts near the bottom corners, above the
+progress prompt and below the capybara's visible route. Colors change with seasons.
+They use CSS silhouettes without image requests or motion. Resource bodies total
+438,010 bytes (972 bytes above v11); scene descendants total 31.
+
 Run `node tools/preview.cjs` to preview at http://127.0.0.1:4173.
 
 If regenerating the static export, retain the conditional loader in index.html,
-the desktop-only preload media queries, assets/mobile-lite-v11.{js,css}, and
+the desktop-only preload media queries, assets/mobile-lite-v12.{js,css}, and
 assets/desktop-route-v1.css.
 The older source in ../../08_Site does not include these static-export changes.
