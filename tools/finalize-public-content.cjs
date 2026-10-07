@@ -1,8 +1,8 @@
 // Version the entry point and refresh CSP hashes after changing inline HTML code.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..');
-const old='index-mobile-scroll-v1.js',previous='index-public-content-v1.js',next='index-public-content-v2.js';
-const oldContext='layout-segment-context-mobile-scroll-v1.js',nextContext='layout-segment-context-public-v2.js';
+const old='index-mobile-scroll-v1.js',previous='index-public-content-v2.js',next='index-public-content-v3.js';
+const oldContext='layout-segment-context-mobile-scroll-v1.js',nextContext='layout-segment-context-public-v3.js';
 const chunks=path.join(root,'_next/static/chunks');
 // These modules form a cycle: the layout provider imports the entry's context,
 // and the entry imports the provider. Version both ends together. An immutable
