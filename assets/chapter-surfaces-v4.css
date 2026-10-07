@@ -1,0 +1,73 @@
+/* Brand surfaces derived from the supplied blue/cyan Portel banner. */
+:root {
+  --navy:#081e35;
+  --navy-soft:#082c4c;
+  --ink:#081e35;
+  --muted:#405b70;
+  --cream:#f2f7fc;
+  --teal:#45c6d8;
+  --teal-dark:#146ba4;
+}
+.public-section,.method-section,.services-section,.process-section,.contact-section {
+  padding-inline:max(clamp(1.5rem,4vw,5rem),calc((100% - 1600px)/2));
+  padding-block:clamp(3.5rem,5vw,5rem);
+  scroll-margin-top:100px;
+  --ink:#081e35;
+  --muted:#405b70;
+  --teal:#146ba4;
+  --teal-dark:#146ba4;
+}
+#sobre,#entregas,.services-section {
+  background:#082c4c;
+  color:#fff;
+  --ink:#fff;
+  --muted:#d3e8f6;
+  --teal:#79d9ec;
+  --teal-dark:#79d9ec;
+}
+.method-section,#situacoes,#exemplo,.contact-section {
+  background:#e2f0fa;
+  --ink:#081e35;
+  --muted:#405b70;
+  --teal:#146ba4;
+  --teal-dark:#146ba4;
+}
+.process-section,#perguntas {background:#cde4f4}
+.method-section {gap:clamp(2rem,6vw,6rem)}
+.method-copy {padding-top:1.5rem}
+.method-section .section-heading h2,.process-section .section-heading h2 {
+  font-size:clamp(2.25rem,3.5vw,3.5rem);
+}
+.contact-section {color:#081e35;--navy:#081e35}
+.contact-section .section-kicker {color:#146ba4;opacity:1}
+.diagnosis-form,footer {background:#081e35}
+.diagnosis-form {--teal:#45c6d8}
+.diagnosis-form input:focus,.diagnosis-form select:focus {box-shadow:0 0 0 .22rem #45c6d824}
+.form-submit {background:#f2cc29;color:#081e35}
+.form-feedback.is-success {color:#d3f6ff;background:#45c6d829}
+.button-primary {box-shadow:0 .8rem 2rem #45c6d82e}
+.leak-card:hover {background:#45c6d814}
+.mobile-lite .journey-sticky:not([data-season="winter"]) .season-rail span {color:#081e3594}
+.mobile-lite .journey-sticky:not([data-season="winter"]) .season-rail span.active {color:#081e35}
+.public-card,.public-example,.public-faq,.public-faq:first-of-type,
+.public-example dd,.process-steps article,.process-steps article:nth-child(2) {border-color:#081e3533}
+#entregas .public-card,#entregas .public-card:last-child {border-color:#d3e8f644}
+.public-section a:focus-visible,.public-faq summary:focus-visible {outline-color:#146ba4}
+#sobre a:focus-visible,#entregas a:focus-visible {outline-color:#79d9ec}
+#situacoes {padding-top:clamp(3.5rem,5vw,5rem)}
+.site-header,.site-header.header-content {
+  background:linear-gradient(var(--header-surface,#031320) 65%,transparent);
+}
+.site-header.header-content .nav-cta {border-color:#081e3566}
+@media (max-width:900px) {
+  .public-section,.method-section,.services-section,.process-section,.contact-section {
+    padding:3rem 1.5rem;
+    scroll-margin-top:85px;
+  }
+  .method-section {gap:1.5rem}
+  .method-copy {padding-top:0}
+  .method-section .section-heading h2,.process-section .section-heading h2 {
+    font-size:clamp(1.85rem,6.5vw,2.8rem);
+  }
+  #situacoes {padding-top:3rem}
+}
