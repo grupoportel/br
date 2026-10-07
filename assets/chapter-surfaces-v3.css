@@ -1,0 +1,56 @@
+/* Full-width surfaces and a shared content axis, with no decorative cards. */
+.public-section,.method-section,.services-section,.process-section,.contact-section {
+  padding-inline: max(clamp(1.5rem,4vw,5rem),calc((100% - 1600px)/2));
+  padding-block: clamp(3.5rem,5vw,5rem);
+  scroll-margin-top:100px;
+}
+#sobre {
+  background: #123b3e;
+  color: #f3f7f7;
+  --ink: #f3f7f7;
+  --muted: #c4d8d5;
+  --teal-dark: #72dfcd;
+}
+.method-section,#situacoes {
+  background: #e4ecec;
+  --ink: #193c3e;
+  --muted: #415f62;
+  --teal: #23665e;
+  --teal-dark: #23665e;
+}
+.method-section {gap:clamp(2rem,6vw,6rem)}
+.method-copy {padding-top:1.5rem}
+.method-section .section-heading h2,.process-section .section-heading h2 {
+  font-size:clamp(2.25rem,3.5vw,3.5rem);
+}
+.process-section {background:#d4e1e1}
+#situacoes {background:#e4ecec}
+#entregas {--ink:#f3f7f7;color:#f3f7f7}
+.services-section {background:#123b3e}
+#exemplo {background:#e4ecec;--muted:#415f62}
+#perguntas {background:#d4e1e1}
+.contact-section {
+  background:#e4ecec;
+  color:#123b3e;
+  --ink:#123b3e;
+  --navy:#123b3e;
+}
+.contact-section .section-kicker {color:#23665e;opacity:1}
+.diagnosis-form {background:#102e31}
+footer {background:#102e31}
+#situacoes {padding-top:clamp(3.5rem,5vw,5rem)}
+.site-header,.site-header.header-content {
+  background:linear-gradient(var(--header-surface,#031320) 65%,transparent);
+}
+@media (max-width:900px) {
+  .public-section,.method-section,.services-section,.process-section,.contact-section {
+    padding:3rem 1.5rem;
+    scroll-margin-top:85px;
+  }
+  .method-section {gap:1.5rem}
+  .method-copy {padding-top:0}
+  .method-section .section-heading h2,.process-section .section-heading h2 {
+    font-size:clamp(1.85rem,6.5vw,2.8rem);
+  }
+  #situacoes {padding-top:3rem}
+}
